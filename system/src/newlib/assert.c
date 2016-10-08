@@ -15,11 +15,9 @@ __attribute__((noreturn))
 __assert_func (const char *file, int line, const char *func,
                const char *failedexpr)
 {
-  trace_printf ("assertion \"%s\" failed: file \"%s\", line %d%s%s\n",
-                failedexpr, file, line, func ? ", function: " : "",
-                func ? func : "");
-  abort ();
-  /* NOTREACHED */
+
+	  abort ();
+	  /* NOTREACHED */
 }
 
 // ----------------------------------------------------------------------------

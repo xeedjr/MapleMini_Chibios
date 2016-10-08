@@ -26,7 +26,7 @@
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.424773651" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.368228206" name="Enable all common warnings (-Wall)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.extrawarn.1278296475" name="Enable extra warnings (-Wextra)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.extrawarn" value="true" valueType="boolean"/>
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.freestanding.74856722" name="Assume freestanding environment (-ffreestanding)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.freestanding" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.freestanding.74856722" name="Assume freestanding environment (-ffreestanding)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.freestanding" value="false" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nomoveloopinvariants.574756918" name="Disable loop invariant move (-fno-move-loop-invariants)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nomoveloopinvariants" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.1106863833" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name" value="GNU Tools for ARM Embedded Processors" valueType="string"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.951711624" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
@@ -118,6 +118,11 @@
 									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/cmsis_os"/>
 									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/compilers/GCC"/>
 									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/various/cpp_wrappers"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/CMSIS_RTOS/port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/Chibios-HAL/port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/rtu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/ascii}&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.468131383" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEBUG"/>
@@ -125,6 +130,7 @@
 									<listOptionValue builtIn="false" value="USE_FULL_ASSERT"/>
 									<listOptionValue builtIn="false" value="STM32F10X_MD"/>
 								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other.576066433" name="Other compiler flags" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other" useByScannerDiscovery="true" value="-r" valueType="string"/>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1259829327" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.130764176" name="Cross ARM C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
@@ -156,6 +162,11 @@
 									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/cmsis_os"/>
 									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/compilers/GCC"/>
 									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/various/cpp_wrappers"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/CMSIS_RTOS/port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/Chibios-HAL/port}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/rtu}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/ascii}&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.noexceptions.1470202562" name="Do not use exceptions (-fno-exceptions)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.noexceptions" useByScannerDiscovery="true" value="false" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.nortti.1195497566" name="Do not use RTTI (-fno-rtti)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.nortti" useByScannerDiscovery="true" value="true" valueType="boolean"/>
@@ -168,6 +179,7 @@
 									<listOptionValue builtIn="false" value="STM32F10X_MD"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.files.1150241418" name="Include files (-include)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.files" useByScannerDiscovery="false"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.other.1333245638" name="Other compiler flags" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.other" useByScannerDiscovery="true" value="-r" valueType="string"/>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.429632" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input"/>
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.1803088757" name="Cross ARM C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker">
@@ -191,8 +203,8 @@
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart.435011138" name="Do not use standard start files (-nostartfiles)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.flags.1476806470" name="Linker flags (-Xlinker [option])" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.flags" valueType="stringList">
-									<listOptionValue builtIn="false" value="--defsym=__process_stack_size__=0x400"/>
-									<listOptionValue builtIn="false" value="--defsym=__main_stack_size__=0x4000"/>
+									<listOptionValue builtIn="false" value="--defsym=__process_stack_size__=0x200"/>
+									<listOptionValue builtIn="false" value="--defsym=__main_stack_size__=0x2000"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.input.876460942" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -214,8 +226,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry excluding="demo/Z8ENCORE|demo/WIN32TCP|demo/WIN32|demo/STR71XTCP|demo/STR71XGCC|demo/STR71X|demo/MSP430|demo/MCF5235TCP|demo/MCF5235CW|demo/MCF5235|demo/LPC214X|demo/LINUXTCP|demo/LINUX|demo/HCS08|demo/BARE|demo/AVR|demo/ATSAM3S_FREERTOS|demo/ATSAM3S|demo/AT91SAM7X_ROWLEY|tools|doc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="modbus"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="os"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
-						<entry excluding="os/hal/ports/STM32/LLD/GPIOv2|os/hal/src/adc.c|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/compilers/RVCT|os/hal/ports/SPC5|os/hal/ports/KINETIS|os/common/ports/e200|os/common/ports/ARMCMx/devices/K20x|os/hal/ports/STM32/LLD/USARTv2|os/common/ports/ARMCMx/devices/STM32F4xx|os/hal/ports/STM32/STM32F0xx|os/rt/ports/SIMIA32|os/hal/ports/STM32/LLD/DMAv1|os/hal/ports/simulator|os/various/shell.c|os/hal/osal/nil|os/ext/CMSIS/KINETIS|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.S|os/hal/ports/AVR|os/rt/ports/ARMCMx/chcore_v6m.c|os/rt/ports/ARMCMx/cmsis_os|os/common/ports/ARMCMx/compilers/GCC/ld|os/hal/ports/STM32/LLD/SPIv2|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/various/syscalls.c|os/hal/ports/STM32/LLD/I2Cv2|os/common/ports/ARMCMx/devices/STM32F0xx|os/various/devices_lib|os/hal/ports/STM32/STM32L0xx|os/hal/ports/STM32/STM32L1xx|os/rt/ports/AVR|os/hal/templates|os/hal/osal/os-less|os/various/lwip_bindings|os/common/ports/ARMCMx/devices/KL2x|os/nil|os/rt/ports/ARM|os/rt/ports/e200|os/common/ports/ARMCMx/devices/STM32L1xx|os/hal/ports/LPC|os/hal/boards|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARM|os/rt/templates|os/hal/ports/STM32/STM32F3xx|os/various/evtimer.c|os/hal/ports/STM32/LLD/RTCv2|os/hal/dox|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/IAR|os/hal/ports/STM32/STM32F37x|os/common/ports/ARMCMx/compilers/GCC/mk|os/hal/ports/STM32/STM32F4xx|os/various/fatfs_bindings|os/rt/ports/ARMCMx/compilers/RVCT" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src_os"/>
+						<entry excluding="os/hal/ports/STM32/LLD/GPIOv2|os/hal/ports/STM32/LLD/OTGv1|os/hal/src/adc.c|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/compilers/RVCT|os/hal/ports/SPC5|os/hal/ports/KINETIS|os/common/ports/e200|os/common/ports/ARMCMx/devices/K20x|os/hal/ports/STM32/LLD/USARTv2|os/common/ports/ARMCMx/devices/STM32F4xx|os/hal/ports/STM32/STM32F0xx|os/rt/ports/SIMIA32|os/hal/ports/STM32/LLD/DMAv1|os/hal/ports/simulator|os/various/shell.c|os/hal/osal/nil|os/ext/CMSIS/KINETIS|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.S|os/hal/ports/AVR|os/rt/ports/ARMCMx/chcore_v6m.c|os/common/ports/ARMCMx/compilers/GCC/ld|os/hal/ports/STM32/LLD/SPIv2|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/various/syscalls.c|os/hal/ports/STM32/LLD/I2Cv2|os/common/ports/ARMCMx/devices/STM32F0xx|os/various/devices_lib|os/hal/ports/STM32/STM32L0xx|os/hal/ports/STM32/STM32L1xx|os/rt/ports/AVR|os/hal/templates|os/hal/osal/os-less|os/various/lwip_bindings|os/common/ports/ARMCMx/devices/KL2x|os/nil|os/rt/ports/ARM|os/rt/ports/e200|os/common/ports/ARMCMx/devices/STM32L1xx|os/hal/ports/LPC|os/hal/boards|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARM|os/rt/templates|os/hal/ports/STM32/STM32F3xx|os/various/evtimer.c|os/hal/ports/STM32/LLD/RTCv2|os/hal/dox|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/IAR|os/hal/ports/STM32/STM32F37x|os/common/ports/ARMCMx/compilers/GCC/mk|os/hal/ports/STM32/STM32F4xx|os/various/fatfs_bindings|os/rt/ports/ARMCMx/compilers/RVCT" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src_os"/>
 						<entry excluding="src/stm32f1-stdperiph/stm32f10x_dbgmcu.c|src/stm32f1-stdperiph/stm32f10x_adc.c|src/stm32f1-stdperiph/stm32f10x_i2c.c|src/stm32f1-stdperiph/stm32f10x_iwdg.c|src/stm32f1-stdperiph/stm32f10x_can.c|src/stm32f1-stdperiph/stm32f10x_dac.c|src/stm32f1-stdperiph/stm32f10x_pwr.c|src/stm32f1-stdperiph/stm32f10x_spi.c|src/stm32f1-stdperiph/stm32f10x_exti.c|src/stm32f1-stdperiph/stm32f10x_sdio.c|src/stm32f1-stdperiph/stm32f10x_rtc.c|src/stm32f1-stdperiph/stm32f10x_wwdg.c|src/stm32f1-stdperiph/stm32f10x_tim.c|src/stm32f1-stdperiph/stm32f10x_dma.c|src/stm32f1-stdperiph/stm32f10x_bkp.c|src/stm32f1-stdperiph/stm32f10x_crc.c|src/newlib/_startup.c|src/newlib/_cxx.cpp|src/stm32f1-stdperiph/stm32f10x_flash.c|src/stm32f1-stdperiph/stm32f10x_usart.c|src/stm32f1-stdperiph/stm32f10x_fsmc.c|src/stm32f1-stdperiph/stm32f10x_cec.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="system"/>
 					</sourceEntries>
 				</configuration>
@@ -356,8 +370,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry excluding="demo/Z8ENCORE|demo/WIN32TCP|demo/WIN32|demo/STR71XTCP|demo/STR71XGCC|demo/STR71X|demo/MSP430|demo/MCF5235TCP|demo/MCF5235CW|demo/MCF5235|demo/LPC214X|demo/LINUXTCP|demo/LINUX|demo/HCS08|demo/BARE|demo/AVR|demo/ATSAM3S_FREERTOS|demo/ATSAM3S|demo/AT91SAM7X_ROWLEY|tools|doc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="modbus"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="os"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
-						<entry excluding="os/hal/ports/STM32/LLD/GPIOv2|os/hal/src/adc.c|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/hal/ports/STM32/LLD/DMAv1|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.S|os/rt/ports/ARMCMx/chcore_v6m.c|os/hal/ports/STM32/LLD/USARTv2|os/hal/ports/STM32/LLD/SPIv2|os/hal/ports/STM32/LLD/RTCv2|os/hal/ports/STM32/LLD/I2Cv2|os/hal/ports/STM32/STM32L1xx|os/hal/ports/STM32/STM32L0xx|os/hal/ports/STM32/STM32F4xx|os/hal/ports/STM32/STM32F3xx|os/hal/ports/STM32/STM32F37x|os/hal/ports/STM32/STM32F0xx|os/hal/boards|os/hal/dox|os/hal/templates|os/hal/ports/SPC5|os/hal/ports/simulator|os/hal/ports/LPC|os/hal/ports/KINETIS|os/hal/ports/AVR|os/hal/osal/os-less|os/hal/osal/nil|os/rt/templates|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/RVCT|os/rt/ports/ARMCMx/compilers/IAR|os/rt/ports/ARMCMx/cmsis_os|os/rt/ports/SIMIA32|os/rt/ports/e200|os/rt/ports/AVR|os/rt/ports/ARM|os/nil|os/various/syscalls.c|os/various/shell.c|os/various/evtimer.c|os/various/lwip_bindings|os/various/fatfs_bindings|os/various/devices_lib|os/ext/CMSIS/KINETIS|os/common/ports/ARMCMx/devices/STM32L1xx|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARMCMx/devices/STM32F4xx|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/devices/STM32F0xx|os/common/ports/ARMCMx/devices/KL2x|os/common/ports/ARMCMx/devices/K20x|os/common/ports/ARMCMx/compilers/GCC/mk|os/common/ports/ARMCMx/compilers/GCC/ld|os/common/ports/ARMCMx/compilers/RVCT|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/e200|os/common/ports/ARM" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src_os"/>
+						<entry excluding="os/hal/ports/STM32/LLD/GPIOv2|os/hal/ports/STM32/LLD/OTGv1|os/hal/src/adc.c|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/hal/ports/STM32/LLD/DMAv1|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.S|os/rt/ports/ARMCMx/chcore_v6m.c|os/hal/ports/STM32/LLD/USARTv2|os/hal/ports/STM32/LLD/SPIv2|os/hal/ports/STM32/LLD/RTCv2|os/hal/ports/STM32/LLD/I2Cv2|os/hal/ports/STM32/STM32L1xx|os/hal/ports/STM32/STM32L0xx|os/hal/ports/STM32/STM32F4xx|os/hal/ports/STM32/STM32F3xx|os/hal/ports/STM32/STM32F37x|os/hal/ports/STM32/STM32F0xx|os/hal/boards|os/hal/dox|os/hal/templates|os/hal/ports/SPC5|os/hal/ports/simulator|os/hal/ports/LPC|os/hal/ports/KINETIS|os/hal/ports/AVR|os/hal/osal/os-less|os/hal/osal/nil|os/rt/templates|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/RVCT|os/rt/ports/ARMCMx/compilers/IAR|os/rt/ports/SIMIA32|os/rt/ports/e200|os/rt/ports/AVR|os/rt/ports/ARM|os/nil|os/various/syscalls.c|os/various/shell.c|os/various/evtimer.c|os/various/lwip_bindings|os/various/fatfs_bindings|os/various/devices_lib|os/ext/CMSIS/KINETIS|os/common/ports/ARMCMx/devices/STM32L1xx|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARMCMx/devices/STM32F4xx|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/devices/STM32F0xx|os/common/ports/ARMCMx/devices/KL2x|os/common/ports/ARMCMx/devices/K20x|os/common/ports/ARMCMx/compilers/GCC/mk|os/common/ports/ARMCMx/compilers/GCC/ld|os/common/ports/ARMCMx/compilers/RVCT|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/e200|os/common/ports/ARM" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src_os"/>
 						<entry excluding="src/stm32f1-stdperiph/stm32f10x_dbgmcu.c|src/stm32f1-stdperiph/stm32f10x_adc.c|src/stm32f1-stdperiph/stm32f10x_i2c.c|src/stm32f1-stdperiph/stm32f10x_iwdg.c|src/stm32f1-stdperiph/stm32f10x_can.c|src/stm32f1-stdperiph/stm32f10x_dac.c|src/stm32f1-stdperiph/stm32f10x_pwr.c|src/stm32f1-stdperiph/stm32f10x_spi.c|src/stm32f1-stdperiph/stm32f10x_exti.c|src/stm32f1-stdperiph/stm32f10x_sdio.c|src/stm32f1-stdperiph/stm32f10x_rtc.c|src/stm32f1-stdperiph/stm32f10x_wwdg.c|src/stm32f1-stdperiph/stm32f10x_tim.c|src/stm32f1-stdperiph/stm32f10x_dma.c|src/stm32f1-stdperiph/stm32f10x_bkp.c|src/stm32f1-stdperiph/stm32f10x_crc.c|src/newlib/_startup.c|src/newlib/_cxx.cpp|src/stm32f1-stdperiph/stm32f10x_flash.c|src/stm32f1-stdperiph/stm32f10x_usart.c|src/stm32f1-stdperiph/stm32f10x_fsmc.c|src/stm32f1-stdperiph/stm32f10x_cec.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="system"/>
 					</sourceEntries>
 				</configuration>
@@ -384,5 +400,12 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/103proj"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/103proj"/>
+		</configuration>
+	</storageModule>
 </cproject>

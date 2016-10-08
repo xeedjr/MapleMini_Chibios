@@ -10,9 +10,49 @@
 
 #include "ch.hpp"
 #include "hal.h"
+#include "cmsis_os.h"
+#include "mb.h"
 
 using namespace chibios_rt;
 
+
+#if HAL_USE_EXT
+static EXTConfig extcfg = {
+  {
+    {EXT_CH_MODE_BOTH_EDGES | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOA, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL}
+  }
+};
+#endif
+
+
+eMBErrorCode
+eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
+                 eMBRegisterMode eMode )
+{
+	if (eMode == MB_REG_READ) {
+		*pucRegBuffer = 1;
+		return MB_ENOERR;
+	}
+    return MB_ENOREG;
+}
 
 /*
  * Application entry point.
@@ -31,17 +71,18 @@ int main(void) {
 
   BaseThread::sleep(S2ST(2));
 
+	eMBInit( MB_RTU, 1, 1, 115200, MB_PAR_NONE );
+
+	eMBEnable();
+
   /*
    * Serves timer events.
    */
   while (true) {
-//	palSetPad(GPIOD, GPIOD_LED5);       /* Orange.  */
+	palSetPad(INDICATE_PORT, INDICATE);       /* Orange.  */
 	BaseThread::sleep(MS2ST(500));
-//	palClearPad(GPIOD, GPIOD_LED5);     /* Orange.  */
+	palClearPad(INDICATE_PORT, INDICATE);     /* Orange.  */
 	BaseThread::sleep(MS2ST(500));
-//    if (palReadPad(GPIOA, GPIOA_BUTTON)) {
-//
-///    };
   }
 
   return 0;
