@@ -1,3 +1,6 @@
 [submodule "modbus"]
 	path = modbus
 	url = https://github.com/xeedjr/freemodbus.git
+[submodule "os"]
+	path = os
+	url = https://github.com/ChibiOS/ChibiOS.git
