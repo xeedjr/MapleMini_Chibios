@@ -24,11 +24,4 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src_os/os</name>
-			<type>2</type>
-			<location>C:/ChibiStudio/chibios30/os</location>
-		</link>
-	</linkedResources>
 </projectDescription>

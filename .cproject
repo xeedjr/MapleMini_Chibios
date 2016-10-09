@@ -56,30 +56,30 @@
 									<listOptionValue builtIn="false" value="D:/Bogdan/Projects/workspace_water/103proj/include"/>
 									<listOptionValue builtIn="false" value="D:/Bogdan/Projects/workspace_water/103proj/system/include"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src_os/board}&quot;"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/ST"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/lib/streams"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/SPIv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/I2Cv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/ADCv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/RTCv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/USBv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/USARTv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/GPIOv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/DMAv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/TIMv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/common/ARMCMx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/osal/rt"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/ST/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/common/ports/ARMCMx/devices/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/cmsis_os"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/compilers/GCC"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/various/cpp_wrappers"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/lib/streams}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/SPIv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/I2Cv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/ADCv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/RTCv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USBv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USARTv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/GPIOv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/DMAv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/TIMv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/common/ARMCMx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/osal/rt}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/devices/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/cmsis_os}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/compilers/GCC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/various/cpp_wrappers}&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.718838703" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEBUG"/>
@@ -94,30 +94,30 @@
 									<listOptionValue builtIn="false" value="D:/Bogdan/Projects/workspace_water/103proj/include"/>
 									<listOptionValue builtIn="false" value="D:/Bogdan/Projects/workspace_water/103proj/system/include"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src_os/board}&quot;"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/ST"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/lib/streams"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/SPIv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/I2Cv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/ADCv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/RTCv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/USBv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/USARTv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/GPIOv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/DMAv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/TIMv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/common/ARMCMx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/osal/rt"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/ST/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/common/ports/ARMCMx/devices/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/cmsis_os"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/compilers/GCC"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/various/cpp_wrappers"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/lib/streams}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/SPIv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/I2Cv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/ADCv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/RTCv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USBv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USARTv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/GPIOv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/DMAv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/TIMv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/common/ARMCMx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/osal/rt}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/devices/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/cmsis_os}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/compilers/GCC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/various/cpp_wrappers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/CMSIS_RTOS/port}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/Chibios-HAL/port}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/include}&quot;"/>
@@ -138,30 +138,30 @@
 									<listOptionValue builtIn="false" value="D:/Bogdan/Projects/workspace_water/103proj/include"/>
 									<listOptionValue builtIn="false" value="D:/Bogdan/Projects/workspace_water/103proj/system/include"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src_os/board}&quot;"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/ST"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/lib/streams"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/SPIv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/I2Cv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/ADCv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/RTCv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/USBv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/USARTv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/GPIOv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/DMAv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/LLD/TIMv1"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/common/ARMCMx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/osal/rt"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/ports/STM32/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/hal/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/ext/CMSIS/ST/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/common/ports/ARMCMx/devices/STM32F1xx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/include"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/cmsis_os"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/rt/ports/ARMCMx/compilers/GCC"/>
-									<listOptionValue builtIn="false" value="C:/ChibiStudio/chibios30/os/various/cpp_wrappers"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/lib/streams}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/SPIv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/I2Cv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/ADCv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/RTCv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USBv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USARTv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/GPIOv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/DMAv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/TIMv1}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/common/ARMCMx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/osal/rt}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/devices/STM32F1xx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/cmsis_os}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/compilers/GCC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/various/cpp_wrappers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/CMSIS_RTOS/port}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/Chibios-HAL/port}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/include}&quot;"/>
@@ -198,8 +198,8 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.733864719" name="Remove unused sections (-Xlinker --gc-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.paths.1198298928" name="Library search path (-L)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.paths"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.scriptfile.1531335477" name="Script files (-T)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.scriptfile" valueType="stringList">
-									<listOptionValue builtIn="false" value="&quot;C:\ChibiStudio\chibios30\os\common\ports\ARMCMx\compilers\GCC\ld\STM32F103xB.ld&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\ChibiStudio\chibios30\os\common\ports\ARMCMx\compilers\GCC\rules.ld&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/compilers/GCC/ld/STM32F103xB.ld}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/compilers/GCC/rules.ld}&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart.435011138" name="Do not use standard start files (-nostartfiles)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.flags.1476806470" name="Linker flags (-Xlinker [option])" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.flags" valueType="stringList">
@@ -227,8 +227,9 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="demo/Z8ENCORE|demo/WIN32TCP|demo/WIN32|demo/STR71XTCP|demo/STR71XGCC|demo/STR71X|demo/MSP430|demo/MCF5235TCP|demo/MCF5235CW|demo/MCF5235|demo/LPC214X|demo/LINUXTCP|demo/LINUX|demo/HCS08|demo/BARE|demo/AVR|demo/ATSAM3S_FREERTOS|demo/ATSAM3S|demo/AT91SAM7X_ROWLEY|tools|doc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="modbus"/>
+						<entry excluding="os/hal/ports/STM32/LLD/DMAv1|os/hal/ports/STM32/LLD/USARTv2|os/hal/ports/STM32/LLD/SPIv2|os/hal/ports/STM32/LLD/RTCv2|os/hal/ports/STM32/LLD/I2Cv2|os/hal/ports/STM32/LLD/GPIOv2|os/hal/ports/STM32/LLD/DACv1|os/hal/ports/STM32/STM32L1xx|os/hal/ports/STM32/STM32F4xx|os/hal/ports/STM32/STM32F3xx|os/hal/ports/STM32/STM32F37x|os/hal/ports/STM32/STM32F0xx|os/hal/ports/simulator|os/hal/ports/LPC|os/hal/ports/KINETIS|os/hal/ports/AVR|os/hal/osal/os-less|os/hal/osal/nil|os/hal/templates|os/hal/dox|os/hal/boards|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.s|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/RVCT|os/rt/ports/ARMCMx/compilers/IAR|os/rt/ports/ARMCMx/chcore_v6m.c|os/rt/ports/SIMIA32|os/rt/ports/e200|os/rt/ports/AVR|os/rt/ports/ARM|os/rt/templates|os/rt/dox|os/various/lwip_bindings|os/various/fatfs_bindings|os/various/devices_lib|os/ext/CMSIS/KINETIS|os/common/ports/ARMCMx/devices/STM32L1xx|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARMCMx/devices/STM32F4xx|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/devices/STM32F0xx|os/common/ports/ARMCMx/devices/KL2x|os/common/ports/ARMCMx/devices/K20x|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/common/ports/ARMCMx/compilers/GCC/mk|os/common/ports/ARMCMx/compilers/GCC/ld|os/common/ports/ARMCMx/compilers/RVCT|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/e200|os/common/ports/ARM|os/nil|ext|testhal|test|doc|demos" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="os"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
-						<entry excluding="os/hal/ports/STM32/LLD/GPIOv2|os/hal/ports/STM32/LLD/OTGv1|os/hal/src/adc.c|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/compilers/RVCT|os/hal/ports/SPC5|os/hal/ports/KINETIS|os/common/ports/e200|os/common/ports/ARMCMx/devices/K20x|os/hal/ports/STM32/LLD/USARTv2|os/common/ports/ARMCMx/devices/STM32F4xx|os/hal/ports/STM32/STM32F0xx|os/rt/ports/SIMIA32|os/hal/ports/STM32/LLD/DMAv1|os/hal/ports/simulator|os/various/shell.c|os/hal/osal/nil|os/ext/CMSIS/KINETIS|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.S|os/hal/ports/AVR|os/rt/ports/ARMCMx/chcore_v6m.c|os/common/ports/ARMCMx/compilers/GCC/ld|os/hal/ports/STM32/LLD/SPIv2|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/various/syscalls.c|os/hal/ports/STM32/LLD/I2Cv2|os/common/ports/ARMCMx/devices/STM32F0xx|os/various/devices_lib|os/hal/ports/STM32/STM32L0xx|os/hal/ports/STM32/STM32L1xx|os/rt/ports/AVR|os/hal/templates|os/hal/osal/os-less|os/various/lwip_bindings|os/common/ports/ARMCMx/devices/KL2x|os/nil|os/rt/ports/ARM|os/rt/ports/e200|os/common/ports/ARMCMx/devices/STM32L1xx|os/hal/ports/LPC|os/hal/boards|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARM|os/rt/templates|os/hal/ports/STM32/STM32F3xx|os/various/evtimer.c|os/hal/ports/STM32/LLD/RTCv2|os/hal/dox|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/IAR|os/hal/ports/STM32/STM32F37x|os/common/ports/ARMCMx/compilers/GCC/mk|os/hal/ports/STM32/STM32F4xx|os/various/fatfs_bindings|os/rt/ports/ARMCMx/compilers/RVCT" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src_os"/>
+						<entry excluding="os|os/hal/ports/STM32/LLD/GPIOv2|os/hal/ports/STM32/LLD/OTGv1|os/hal/src/adc.c|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/compilers/RVCT|os/hal/ports/SPC5|os/hal/ports/KINETIS|os/common/ports/e200|os/common/ports/ARMCMx/devices/K20x|os/hal/ports/STM32/LLD/USARTv2|os/common/ports/ARMCMx/devices/STM32F4xx|os/hal/ports/STM32/STM32F0xx|os/rt/ports/SIMIA32|os/hal/ports/STM32/LLD/DMAv1|os/hal/ports/simulator|os/various/shell.c|os/hal/osal/nil|os/ext/CMSIS/KINETIS|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.S|os/hal/ports/AVR|os/rt/ports/ARMCMx/chcore_v6m.c|os/common/ports/ARMCMx/compilers/GCC/ld|os/hal/ports/STM32/LLD/SPIv2|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/various/syscalls.c|os/hal/ports/STM32/LLD/I2Cv2|os/common/ports/ARMCMx/devices/STM32F0xx|os/various/devices_lib|os/hal/ports/STM32/STM32L0xx|os/hal/ports/STM32/STM32L1xx|os/rt/ports/AVR|os/hal/templates|os/hal/osal/os-less|os/various/lwip_bindings|os/common/ports/ARMCMx/devices/KL2x|os/nil|os/rt/ports/ARM|os/rt/ports/e200|os/common/ports/ARMCMx/devices/STM32L1xx|os/hal/ports/LPC|os/hal/boards|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARM|os/rt/templates|os/hal/ports/STM32/STM32F3xx|os/various/evtimer.c|os/hal/ports/STM32/LLD/RTCv2|os/hal/dox|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/IAR|os/hal/ports/STM32/STM32F37x|os/common/ports/ARMCMx/compilers/GCC/mk|os/hal/ports/STM32/STM32F4xx|os/various/fatfs_bindings|os/rt/ports/ARMCMx/compilers/RVCT" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src_os"/>
 						<entry excluding="src/stm32f1-stdperiph/stm32f10x_dbgmcu.c|src/stm32f1-stdperiph/stm32f10x_adc.c|src/stm32f1-stdperiph/stm32f10x_i2c.c|src/stm32f1-stdperiph/stm32f10x_iwdg.c|src/stm32f1-stdperiph/stm32f10x_can.c|src/stm32f1-stdperiph/stm32f10x_dac.c|src/stm32f1-stdperiph/stm32f10x_pwr.c|src/stm32f1-stdperiph/stm32f10x_spi.c|src/stm32f1-stdperiph/stm32f10x_exti.c|src/stm32f1-stdperiph/stm32f10x_sdio.c|src/stm32f1-stdperiph/stm32f10x_rtc.c|src/stm32f1-stdperiph/stm32f10x_wwdg.c|src/stm32f1-stdperiph/stm32f10x_tim.c|src/stm32f1-stdperiph/stm32f10x_dma.c|src/stm32f1-stdperiph/stm32f10x_bkp.c|src/stm32f1-stdperiph/stm32f10x_crc.c|src/newlib/_startup.c|src/newlib/_cxx.cpp|src/stm32f1-stdperiph/stm32f10x_flash.c|src/stm32f1-stdperiph/stm32f10x_usart.c|src/stm32f1-stdperiph/stm32f10x_fsmc.c|src/stm32f1-stdperiph/stm32f10x_cec.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="system"/>
 					</sourceEntries>
 				</configuration>
@@ -370,8 +371,9 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="demo/Z8ENCORE|demo/WIN32TCP|demo/WIN32|demo/STR71XTCP|demo/STR71XGCC|demo/STR71X|demo/MSP430|demo/MCF5235TCP|demo/MCF5235CW|demo/MCF5235|demo/LPC214X|demo/LINUXTCP|demo/LINUX|demo/HCS08|demo/BARE|demo/AVR|demo/ATSAM3S_FREERTOS|demo/ATSAM3S|demo/AT91SAM7X_ROWLEY|tools|doc" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="modbus"/>
+						<entry excluding="os/hal/ports/STM32/LLD/DMAv1|os/hal/ports/STM32/LLD/USARTv2|os/hal/ports/STM32/LLD/SPIv2|os/hal/ports/STM32/LLD/RTCv2|os/hal/ports/STM32/LLD/I2Cv2|os/hal/ports/STM32/LLD/GPIOv2|os/hal/ports/STM32/LLD/DACv1|os/hal/ports/STM32/STM32L1xx|os/hal/ports/STM32/STM32F4xx|os/hal/ports/STM32/STM32F3xx|os/hal/ports/STM32/STM32F37x|os/hal/ports/STM32/STM32F0xx|os/hal/ports/simulator|os/hal/ports/LPC|os/hal/ports/KINETIS|os/hal/ports/AVR|os/hal/osal/os-less|os/hal/osal/nil|os/hal/templates|os/hal/dox|os/hal/boards|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.s|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/RVCT|os/rt/ports/ARMCMx/compilers/IAR|os/rt/ports/ARMCMx/chcore_v6m.c|os/rt/ports/SIMIA32|os/rt/ports/e200|os/rt/ports/AVR|os/rt/ports/ARM|os/rt/templates|os/rt/dox|os/various/lwip_bindings|os/various/fatfs_bindings|os/various/devices_lib|os/ext/CMSIS/KINETIS|os/common/ports/ARMCMx/devices/STM32L1xx|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARMCMx/devices/STM32F4xx|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/devices/STM32F0xx|os/common/ports/ARMCMx/devices/KL2x|os/common/ports/ARMCMx/devices/K20x|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/common/ports/ARMCMx/compilers/GCC/mk|os/common/ports/ARMCMx/compilers/GCC/ld|os/common/ports/ARMCMx/compilers/RVCT|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/e200|os/common/ports/ARM|os/nil|ext|testhal|test|doc|demos" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="os"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
-						<entry excluding="os/hal/ports/STM32/LLD/GPIOv2|os/hal/ports/STM32/LLD/OTGv1|os/hal/src/adc.c|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/hal/ports/STM32/LLD/DMAv1|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.S|os/rt/ports/ARMCMx/chcore_v6m.c|os/hal/ports/STM32/LLD/USARTv2|os/hal/ports/STM32/LLD/SPIv2|os/hal/ports/STM32/LLD/RTCv2|os/hal/ports/STM32/LLD/I2Cv2|os/hal/ports/STM32/STM32L1xx|os/hal/ports/STM32/STM32L0xx|os/hal/ports/STM32/STM32F4xx|os/hal/ports/STM32/STM32F3xx|os/hal/ports/STM32/STM32F37x|os/hal/ports/STM32/STM32F0xx|os/hal/boards|os/hal/dox|os/hal/templates|os/hal/ports/SPC5|os/hal/ports/simulator|os/hal/ports/LPC|os/hal/ports/KINETIS|os/hal/ports/AVR|os/hal/osal/os-less|os/hal/osal/nil|os/rt/templates|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/RVCT|os/rt/ports/ARMCMx/compilers/IAR|os/rt/ports/SIMIA32|os/rt/ports/e200|os/rt/ports/AVR|os/rt/ports/ARM|os/nil|os/various/syscalls.c|os/various/shell.c|os/various/evtimer.c|os/various/lwip_bindings|os/various/fatfs_bindings|os/various/devices_lib|os/ext/CMSIS/KINETIS|os/common/ports/ARMCMx/devices/STM32L1xx|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARMCMx/devices/STM32F4xx|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/devices/STM32F0xx|os/common/ports/ARMCMx/devices/KL2x|os/common/ports/ARMCMx/devices/K20x|os/common/ports/ARMCMx/compilers/GCC/mk|os/common/ports/ARMCMx/compilers/GCC/ld|os/common/ports/ARMCMx/compilers/RVCT|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/e200|os/common/ports/ARM" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src_os"/>
+						<entry excluding="os|os/hal/ports/STM32/LLD/GPIOv2|os/hal/ports/STM32/LLD/OTGv1|os/hal/src/adc.c|os/common/ports/ARMCMx/compilers/GCC/crt0_v6m.s|os/hal/ports/STM32/LLD/DMAv1|os/rt/ports/ARMCMx/compilers/GCC/chcoreasm_v6m.S|os/rt/ports/ARMCMx/chcore_v6m.c|os/hal/ports/STM32/LLD/USARTv2|os/hal/ports/STM32/LLD/SPIv2|os/hal/ports/STM32/LLD/RTCv2|os/hal/ports/STM32/LLD/I2Cv2|os/hal/ports/STM32/STM32L1xx|os/hal/ports/STM32/STM32L0xx|os/hal/ports/STM32/STM32F4xx|os/hal/ports/STM32/STM32F3xx|os/hal/ports/STM32/STM32F37x|os/hal/ports/STM32/STM32F0xx|os/hal/boards|os/hal/dox|os/hal/templates|os/hal/ports/SPC5|os/hal/ports/simulator|os/hal/ports/LPC|os/hal/ports/KINETIS|os/hal/ports/AVR|os/hal/osal/os-less|os/hal/osal/nil|os/rt/templates|os/rt/ports/ARMCMx/compilers/GCC/mk|os/rt/ports/ARMCMx/compilers/RVCT|os/rt/ports/ARMCMx/compilers/IAR|os/rt/ports/SIMIA32|os/rt/ports/e200|os/rt/ports/AVR|os/rt/ports/ARM|os/nil|os/various/syscalls.c|os/various/shell.c|os/various/evtimer.c|os/various/lwip_bindings|os/various/fatfs_bindings|os/various/devices_lib|os/ext/CMSIS/KINETIS|os/common/ports/ARMCMx/devices/STM32L1xx|os/common/ports/ARMCMx/devices/STM32L0xx|os/common/ports/ARMCMx/devices/STM32F4xx|os/common/ports/ARMCMx/devices/STM32F3xx|os/common/ports/ARMCMx/devices/STM32F0xx|os/common/ports/ARMCMx/devices/KL2x|os/common/ports/ARMCMx/devices/K20x|os/common/ports/ARMCMx/compilers/GCC/mk|os/common/ports/ARMCMx/compilers/GCC/ld|os/common/ports/ARMCMx/compilers/RVCT|os/common/ports/ARMCMx/compilers/IAR|os/common/ports/e200|os/common/ports/ARM" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src_os"/>
 						<entry excluding="src/stm32f1-stdperiph/stm32f10x_dbgmcu.c|src/stm32f1-stdperiph/stm32f10x_adc.c|src/stm32f1-stdperiph/stm32f10x_i2c.c|src/stm32f1-stdperiph/stm32f10x_iwdg.c|src/stm32f1-stdperiph/stm32f10x_can.c|src/stm32f1-stdperiph/stm32f10x_dac.c|src/stm32f1-stdperiph/stm32f10x_pwr.c|src/stm32f1-stdperiph/stm32f10x_spi.c|src/stm32f1-stdperiph/stm32f10x_exti.c|src/stm32f1-stdperiph/stm32f10x_sdio.c|src/stm32f1-stdperiph/stm32f10x_rtc.c|src/stm32f1-stdperiph/stm32f10x_wwdg.c|src/stm32f1-stdperiph/stm32f10x_tim.c|src/stm32f1-stdperiph/stm32f10x_dma.c|src/stm32f1-stdperiph/stm32f10x_bkp.c|src/stm32f1-stdperiph/stm32f10x_crc.c|src/newlib/_startup.c|src/newlib/_cxx.cpp|src/stm32f1-stdperiph/stm32f10x_flash.c|src/stm32f1-stdperiph/stm32f10x_usart.c|src/stm32f1-stdperiph/stm32f10x_fsmc.c|src/stm32f1-stdperiph/stm32f10x_cec.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="system"/>
 					</sourceEntries>
 				</configuration>
