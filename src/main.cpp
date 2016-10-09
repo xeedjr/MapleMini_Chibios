@@ -73,6 +73,8 @@ int main(void) {
 
 	eMBInit( MB_RTU, 1, 1, 115200, MB_PAR_NONE );
 
+	xMBPortPollThreadInit();
+
 	eMBEnable();
 
   /*
