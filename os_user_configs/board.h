@@ -47,16 +47,16 @@
 
 /* on-board */
 
-#define INDICATE               GPIOC_LED
-#define INDICATE_PORT          GPIOC
-#define USER_BUTTON            1
-#define USER_BUTTON_PORT       GPIOC
-#define KRAN_OPEN              2
-#define KRAN_OPEN_PORT         GPIOC
-#define KRAN_CLOSE             3
-#define KRAN_CLOSE_PORT        GPIOC
-#define KRAN_STAT              4
-#define KRAN_STAT_PORT         GPIOC
+#define INDICATE               		GPIOC_LED
+#define INDICATE_PORT          		GPIOC
+#define USER_BUTTON            		7
+#define USER_BUTTON_PORT       		GPIOB
+#define USER_RELE1            		6
+#define USER_RELE1_PORT       		GPIOB
+#define USER_MB_RS485_RTS           12
+#define USER_MB_RS485_RTS_PORT      GPIOA
+#define USER_MB_USART       	  	UARTD1
+#define USER_MB_TIMER 				GPTD1
 
 
 /* on-board */
@@ -155,7 +155,7 @@
  * PB1    - Push Pull output  (LED).
  * PB9    - Push Pull output  (USB switch).
  */
-#define VAL_GPIOBCRL            0x88888838      /*  PB7...PB0 */
+#define VAL_GPIOBCRL            0x86888838      /*  PB7...PB0 */
 #define VAL_GPIOBCRH            0x88888838      /* PB15...PB8 */
 #define VAL_GPIOBODR            0xFFFFFFFF
 
