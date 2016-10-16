@@ -79,9 +79,8 @@ int main(void) {
    */
   halInit();
   osKernelInitialize();
-  //System::init();
 
-  BaseThread::sleep(S2ST(2));
+  osDelay(500);
 
 	eMBInit( MB_RTU, 1, 1, 115200, MB_PAR_NONE );
 
@@ -119,9 +118,9 @@ int main(void) {
    */
   while (true) {
 	palSetPad(INDICATE_PORT, INDICATE);       /* Orange.  */
-	BaseThread::sleep(MS2ST(500));
+	osDelay(500);
 	palClearPad(INDICATE_PORT, INDICATE);     /* Orange.  */
-	BaseThread::sleep(MS2ST(500));
+	osDelay(500);
   }
 
   return 0;
