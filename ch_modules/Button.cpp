@@ -20,7 +20,6 @@ Button::Button(ioportid_t port,
 }
 
 Button::~Button() {
-	// TODO Auto-generated destructor stub
 }
 
 void Button::event_process_() {
@@ -31,7 +30,7 @@ void Button::event_process_() {
 	    	/// received new state need send event and change old state
 	    	is_pushed_old_state_ = true;
 	    	/// start timer
-	    	timer_armed_ = true;
+	    	//timer_armed_ = true;
 	    	osTimerStart(timer_id, 100);
 	    	if (pushed_cb_)
 	    		pushed_cb_();
@@ -42,7 +41,7 @@ void Button::event_process_() {
 	    	/// un pushed GPIOA_BUTTON
 	    	is_pushed_old_state_ = false;
 	    	/// start timer
-	    	timer_armed_ = true;
+	    	//timer_armed_ = true;
 	    	osTimerStart(timer_id, 100);
 	    	if (released_cb_)
 	    		released_cb_();
@@ -52,18 +51,22 @@ void Button::event_process_() {
 }
 
 void Button::static_timer_handler_(void const *argument) {
-//	chibios_rt::System::lockFromIsr();
+	chSysLockFromISR();
 	((Button*)(argument))->timer_handler_();
-//	chibios_rt::System::unlockFromIsr();
+	chSysUnlockFromISR();
 }
 
 void Button::timer_handler_() {
-	timer_armed_ = false;
-	event_process_();
+	timer_cb_();
+	//timer_armed_ = false;
+	//event_process_();
 }
 
+/** @brief !!! Shall be in  chSysLockFromISR
+ *
+ */
 void Button::event() {
-	if (!timer_armed_) {
-		event_process_();
-	};
+	//if (!timer_armed_) {
+		//event_process_();
+	//};
 }

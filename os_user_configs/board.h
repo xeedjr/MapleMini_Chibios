@@ -56,8 +56,9 @@
 #define USER_MB_RS485_RTS           12
 #define USER_MB_RS485_RTS_PORT      GPIOA
 #define USER_MB_USART       	  	UARTD1
+#define USER_MB_RTS_ENABLE			1
 #define USER_MB_TIMER 				GPTD1
-
+#define USER_MB_THREAD_WORK_AREA_SIZE 256
 
 /* on-board */
 
@@ -155,7 +156,7 @@
  * PB1    - Push Pull output  (LED).
  * PB9    - Push Pull output  (USB switch).
  */
-#define VAL_GPIOBCRL            0x86888838      /*  PB7...PB0 */
+#define VAL_GPIOBCRL            0x868888A8      /*  PB7...PB0 */
 #define VAL_GPIOBCRH            0x88888838      /* PB15...PB8 */
 #define VAL_GPIOBODR            0xFFFFFFFF
 
@@ -200,6 +201,7 @@
 extern "C" {
 #endif
   void boardInit(void);
+
 #ifdef __cplusplus
 }
 #endif

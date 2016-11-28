@@ -18,34 +18,36 @@ public:
 	class Events {
 	public:
 		enum EventType {
-			kOpenRele = 0
+			kOpenRele = 0,
+			kSensor
 		} ev_type;
 		union Event {
 			struct OpenRele {
 				bool open_close;
 			} open_rele;
+			struct Sensor {
+				bool sensor_state;
+				uint8_t sensor_id;
+			} sensor;
 		} events;
 	};
 
 	void put_event(Events ev);
 private:
 	MailBox<Events, 3> events_queue_;
+	static void BL_Thread (void const *argument);
 	void Thread (void);
 
-	osThreadId thread_ID;
-	static void BL_Thread (void const *argument) {
-		BL* p = (BL*)(argument);
-
-		p->Thread();
-	}
-	osThreadDef(BL_Thread, osPriorityNormal, 128);
+	osThreadId thread_ID = {0};
+	osThreadDef(BL_Thread, osPriorityNormal, 256);
 
 	struct EventPair{
 		Events::EventType ev_type;
 		std::function<void(Events::Event)>  fun;
 	};
-	std::array<BL::EventPair, 1> bl_ev;
+	std::array<BL::EventPair, 2> bl_ev;
 	void open_rele(Events::Event msg);
+	void sensor(Events::Event msg);
 public:
 	BL();
 	virtual ~BL();

@@ -17,7 +17,8 @@ public:
 	class Events {
 	public:
 		enum {
-			kHoldingRegisterWrite = 0
+			kHoldingRegisterWrite = 0,
+			kSensorState,
 		} ev_type;
 		union Event {
 			class HoldingRegisterWrite {
@@ -36,23 +37,28 @@ public:
 					return usNRegs_;
 				}
 			} holding_register_write;
+			struct kSensorState {
+				bool state;
+				uint8_t id;
+			} sensor_state;
 		} events;
 	};
 private:
 	MailBox<Events, 3> events_queue_;
 	void Thread (void);
 
-	osThreadId mb_thread_ID;
+	osThreadId mb_thread_ID = {0};
 	static void MBComunication_Thread (void const *argument) {
 		MBComunication* p = (MBComunication*)(argument);
 
 		p->Thread();
 	}
-	osThreadDef(MBComunication_Thread, osPriorityNormal, 128);
+	osThreadDef(MBComunication_Thread, osPriorityNormal, 256);
 
 	struct Registers {
 		struct Holding {
 			uint16_t rele1;
+			uint16_t sensor1;
 		} holding;
 	} registers_;
 
@@ -66,6 +72,8 @@ public:
 	eMBErrorCode
 	eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
 	                 eMBRegisterMode eMode );
+
+	void put_event(Events ev);
 };
 
 #endif /* MBCOMUNICATION_H_ */

@@ -13,6 +13,7 @@ extern std::unique_ptr<BL> bl;
 
 MBComunication::MBComunication() {
 	mb_thread_ID = osThreadCreate(osThread(MBComunication_Thread), this);
+	mb_thread_ID->p_name = "MBComunication_Thread";
 }
 
 MBComunication::~MBComunication() {
@@ -27,6 +28,10 @@ bool MBComunication::HoldingCheack (uint16_t usAddress,
 	if (usAddress <= int_Address &&
 		int_Address < (usAddress + usNRegs))
 		return true;
+}
+
+void MBComunication::put_event(Events ev) {
+	events_queue_.push(ev);
 }
 
 void MBComunication::Thread (void) {
@@ -49,6 +54,9 @@ void MBComunication::Thread (void) {
 				}
 				bl->put_event(ev);
 			}
+			break;
+		case Events::kSensorState:
+			registers_.holding.sensor1 = ev.events.sensor_state.state;
 			break;
 		}
 	}
