@@ -54,6 +54,18 @@ eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
 	}
 }
 
+eMBException
+eMBFuncPacket( UCHAR * pucFrame, USHORT * usLen )
+{
+	if (mb_comunication) {
+		return mb_comunication->eMBFuncPacket(pucFrame,
+												usLen);
+	} else {
+	    return MB_EX_NONE;
+	}
+
+    return MB_EX_NONE;
+}
 
 /*
  * Application entry point.
@@ -74,6 +86,7 @@ int main(void) {
   	uint16_t address = stm32_backup_registers.read(1);
   	uint8_t address1 = address & 0x0F;
 	eMBInit( MB_RTU, address1, 1, 115200, MB_PAR_NONE );
+	eMBRegisterCB( 25, eMBFuncPacket);
 
 	xMBPortPollThreadInit();
 

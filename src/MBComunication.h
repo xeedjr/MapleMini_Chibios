@@ -100,6 +100,8 @@ public:
 	eMBErrorCode
 	eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
 	                 eMBRegisterMode eMode );
+	eMBException
+	eMBFuncPacket( UCHAR * pucFrame, USHORT * usLen );
 
 	void put_event(Events ev);
 };
