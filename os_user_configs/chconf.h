@@ -120,7 +120,7 @@
  * @note    This is not related to the compiler optimization options.
  * @note    The default is @p TRUE.
  */
-#define CH_CFG_OPTIMIZE_SPEED               FALSE
+#define CH_CFG_OPTIMIZE_SPEED               TRUE
 
 /** @} */
 
@@ -138,7 +138,7 @@
  *
  * @note    The default is @p TRUE.
  */
-#define CH_CFG_USE_TM                       FALSE
+#define CH_CFG_USE_TM                       TRUE
 
 /**
  * @brief   Threads registry APIs.
@@ -163,7 +163,7 @@
  *
  * @note    The default is @p TRUE.
  */
-#define CH_CFG_USE_SEMAPHORES               FALSE
+#define CH_CFG_USE_SEMAPHORES               TRUE
 
 /**
  * @brief   Semaphores queuing mode.
@@ -182,7 +182,7 @@
  *
  * @note    The default is @p TRUE.
  */
-#define CH_CFG_USE_MUTEXES                  FALSE
+#define CH_CFG_USE_MUTEXES                  TRUE
 
 /**
  * @brief   Enables recursive behavior on mutexes.
@@ -202,7 +202,7 @@
  * @note    The default is @p TRUE.
  * @note    Requires @p CH_CFG_USE_MUTEXES.
  */
-#define CH_CFG_USE_CONDVARS                 FALSE
+#define CH_CFG_USE_CONDVARS                 TRUE
 
 /**
  * @brief   Conditional Variables APIs with timeout.
@@ -239,7 +239,7 @@
  *
  * @note    The default is @p TRUE.
  */
-#define CH_CFG_USE_MESSAGES                 FALSE
+#define CH_CFG_USE_MESSAGES                 TRUE
 
 /**
  * @brief   Synchronous Messages queuing mode.
@@ -260,7 +260,7 @@
  * @note    The default is @p TRUE.
  * @note    Requires @p CH_CFG_USE_SEMAPHORES.
  */
-#define CH_CFG_USE_MAILBOXES                FALSE
+#define CH_CFG_USE_MAILBOXES                TRUE
 
 /**
  * @brief   I/O Queues APIs.
@@ -268,7 +268,7 @@
  *
  * @note    The default is @p TRUE.
  */
-#define CH_CFG_USE_QUEUES                   FALSE
+#define CH_CFG_USE_QUEUES                   TRUE
 
 /**
  * @brief   Core Memory Manager APIs.
@@ -277,7 +277,7 @@
  *
  * @note    The default is @p TRUE.
  */
-#define CH_CFG_USE_MEMCORE                  FALSE
+#define CH_CFG_USE_MEMCORE                  TRUE
 
 /**
  * @brief   Heap Allocator APIs.
@@ -289,7 +289,7 @@
  *          @p CH_CFG_USE_SEMAPHORES.
  * @note    Mutexes are recommended.
  */
-#define CH_CFG_USE_HEAP                     FALSE
+#define CH_CFG_USE_HEAP                     TRUE
 
 /**
  * @brief   Memory Pools Allocator APIs.
@@ -298,7 +298,7 @@
  *
  * @note    The default is @p TRUE.
  */
-#define CH_CFG_USE_MEMPOOLS                 FALSE
+#define CH_CFG_USE_MEMPOOLS                 TRUE
 
 /**
  * @brief   Dynamic Threads APIs.
@@ -309,7 +309,7 @@
  * @note    Requires @p CH_CFG_USE_WAITEXIT.
  * @note    Requires @p CH_CFG_USE_HEAP and/or @p CH_CFG_USE_MEMPOOLS.
  */
-#define CH_CFG_USE_DYNAMIC                  FALSE
+#define CH_CFG_USE_DYNAMIC                  TRUE
 
 /** @} */
 
@@ -494,6 +494,10 @@
 /* Port-specific settings (override port settings defaulted in chcore.h).    */
 /*===========================================================================*/
 
+// Fixup bootloader offset of MapleMini
+#if USE_MAPLEMINI_BOOTLOADER
+# define CORTEX_VTOR_INIT 0x5000
+#endif
 
 #endif  /* _CHCONF_H_ */
 
