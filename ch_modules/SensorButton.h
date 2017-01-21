@@ -13,6 +13,55 @@
 #include "cmsis_os.h"
 #include "hal.h"
 
+/*
+ * #if HAL_USE_EXT
+static EXTConfig extcfg = {
+  { {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+	{EXT_CH_MODE_BOTH_EDGES | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOB, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL}
+  }
+};
+#endif
+
+sensor_button.reset(new SensorButton(USER_BUTTON_PORT,
+									USER_BUTTON,
+									[](){
+										BL::Events ev;
+										ev.ev_type = BL::Events::kSensor;
+										ev.events.sensor.sensor_state = true;
+										ev.events.sensor.sensor_id = 1;
+										bl->put_event(ev);
+									},
+									[](){
+										BL::Events ev;
+										ev.ev_type = BL::Events::kSensor;
+										ev.events.sensor.sensor_state = false;
+										ev.events.sensor.sensor_id = 1;
+										bl->put_event(ev);
+									}));
+	  extcfg.channels[7].cb = [](EXTDriver *extp, expchannel_t channel){
+		  	  	  	  	  	  	  	  	//chSysLockFromISR();
+										sensor_button->event();
+										//chSysUnlockFromISR();
+								  };
+*/
+
 class SensorButton {
 	bool is_pushed_old_state_ = false;
 	ioportid_t port_;

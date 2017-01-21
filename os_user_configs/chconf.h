@@ -495,9 +495,9 @@
 /*===========================================================================*/
 
 // Fixup bootloader offset of MapleMini
-#if USE_MAPLEMINI_BOOTLOADER
+//#if USE_MAPLEMINI_BOOTLOADER
 # define CORTEX_VTOR_INIT 0x5000
-#endif
+//#endif
 
 #endif  /* _CHCONF_H_ */
 

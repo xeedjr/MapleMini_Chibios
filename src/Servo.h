@@ -29,7 +29,16 @@ PWMConfig pwmcfg = {
 #endif
 };
 #endif
+
+/*	  pwmStart(&PWMD3, &pwmcfg);
+	  servo.reset(new Servo);
+	  servo->Init(&PWMD3, 3);
+
+	  servo->Set(-90);
+	  servo->Set(0);
+	  servo->Set(90);
 */
+
 
 class Servo {
 	PWMDriver *pwmp_ = nullptr;

@@ -7,9 +7,9 @@
 #include <string.h>
 #include <memory>
 #include "MBComunication.h"
-#include "BL.h"
+#include "BLExtractor.h"
 
-extern std::unique_ptr<BL> bl;
+extern std::unique_ptr<BLExtractor> bl;
 
 MBComunication::MBComunication() {
 	mb_thread_ID = osThreadCreate(osThread(MBComunication_Thread), this);
@@ -43,20 +43,32 @@ void MBComunication::Thread (void) {
 		case Events::kHoldingRegisterWrite:
 			if (HoldingCheack(ev.events.holding_register_write.usAddress(),
 								ev.events.holding_register_write.usNRegs(),
-								registers_.holding.rele1)) {
-				/// need open rele
-				BL::Events ev;
-				ev.ev_type = BL::Events::kOpenRele;
-				if (registers_.holding.rele1 == 1) {
-					ev.events.open_rele.open_close = true;
-				} else {
-					ev.events.open_rele.open_close = false;
-				}
+								registers_.holding.fan_speed)) {
+				/// need change fan speed
+				BLExtractor::Events ev;
+				ev.ev_type = BLExtractor::Events::kChangeFanSpeed;
+				ev.events.change_fan_speed.speed = registers_.holding.fan_speed;
 				bl->put_event(ev);
 			}
 			break;
 		case Events::kSensorState:
-			registers_.holding.sensor1 = ev.events.sensor_state.state;
+//			registers_.holding.sensor1 = ev.events.sensor_state.state;
+			break;
+		case Events::kUpdateParameters:
+			Conv conv;
+			registers_.holding.fan_speed = ev.events.update_parameters.fan_speed;
+			conv.f = ev.events.update_parameters.humidity;
+			registers_.holding.humidity_lo = conv.hr.lo;
+			registers_.holding.humidity_hi = conv.hr.hi;
+			conv.f = ev.events.update_parameters.temperature;
+			registers_.holding.temperature_hi = conv.hr.hi;
+			registers_.holding.temperature_lo = conv.hr.lo;
+			conv.f = ev.events.update_parameters.humidity_level_on;
+			registers_.holding.humidity_level_on_hi = conv.hr.hi;
+			registers_.holding.humidity_level_on_lo = conv.hr.lo;
+			conv.f = ev.events.update_parameters.humidity_level_off;
+			registers_.holding.humidity_level_off_hi = conv.hr.hi;
+			registers_.holding.humidity_level_off_lo = conv.hr.lo;
 			break;
 		}
 	}
@@ -69,7 +81,7 @@ MBComunication::eMBRegHoldingCB( UCHAR * pucRegBuffer,
 								eMBRegisterMode eMode ) {
 	switch(eMode) {
 	case MB_REG_READ:
-		memcpy(pucRegBuffer, &((uint16_t*)&registers_.holding)[usAddress - 1], usNRegs);
+		memcpy(pucRegBuffer, &((uint16_t*)&registers_.holding)[usAddress - 1], usNRegs * sizeof(uint16_t));
 		return MB_ENOERR;
 	case MB_REG_WRITE:
 		memcpy(&((uint16_t*)&registers_.holding)[usAddress - 1], pucRegBuffer, usNRegs * sizeof(uint16_t));

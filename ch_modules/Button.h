@@ -14,6 +14,58 @@
 #include "ch.hpp"
 #include "hal.h"
 
+/*
+ * #if HAL_USE_EXT
+static EXTConfig extcfg = {
+  { {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+	{EXT_CH_MODE_BOTH_EDGES | EXT_CH_MODE_AUTOSTART | EXT_MODE_GPIOB, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL},
+    {EXT_CH_MODE_DISABLED, NULL}
+  }
+};
+#endif
+
+button1.reset(new Button(USER_BUTTON_PORT,
+								USER_BUTTON,
+								[](){
+									BL::Events ev;
+									ev.ev_type = BL::Events::kSensor;
+									ev.events.sensor.sensor_state = true;
+									ev.events.sensor.sensor_id = 1;
+									bl->put_event(ev);
+								},
+								[](){
+									BL::Events ev;
+									ev.ev_type = BL::Events::kSensor;
+									ev.events.sensor.sensor_state = false;
+									ev.events.sensor.sensor_id = 1;
+									bl->put_event(ev);
+								}));
+
+	  buttons_main.reset(new ButtonsMain);
+	  buttons_main->add(kMainButton, &(*button1));
+
+	  extcfg.channels[7].cb = [](EXTDriver *extp, expchannel_t channel){
+		  	  	  	  	  	  	  	  	chSysLockFromISR();
+		  	  	  	  	  	  	  	  	buttons_main->event(kMainButton);
+										chSysUnlockFromISR();
+								  };
+*/
 
 class Button {
 	osTimerDef(timer_, Button::static_timer_handler_);

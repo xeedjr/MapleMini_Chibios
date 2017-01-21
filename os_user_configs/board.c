@@ -46,4 +46,8 @@ void __early_init(void) {
  * Board-specific initialization code.
  */
 void boardInit(void) {
+	  /*
+	   * Remap I2C1 to the PB8/PB9 pins.
+	   */
+	  AFIO->MAPR |= AFIO_MAPR_I2C1_REMAP;
 }

@@ -87,7 +87,7 @@ private:
 	void pushI(T& item)
 	{
 		osEvent  peEvent_;
-		peEvent_ = osMessageGet(free_mail_box__ID, osWaitForever);
+		peEvent_ = osMessageGet(free_mail_box__ID, 0);
 	    if( osEventMessage != peEvent_.status)
 	    {
 	    	/// error
@@ -95,7 +95,7 @@ private:
 	    }
 		peEvent_.value.v;
 		buffers.at(peEvent_.value.v) = item;
-		osMessagePut(mail_box__ID, peEvent_.value.v, osWaitForever);
+		osMessagePut(mail_box__ID, peEvent_.value.v, 0);
 	}
 };
 

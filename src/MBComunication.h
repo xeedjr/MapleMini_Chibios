@@ -19,6 +19,7 @@ public:
 		enum {
 			kHoldingRegisterWrite = 0,
 			kSensorState,
+			kUpdateParameters
 		} ev_type;
 		union Event {
 			class HoldingRegisterWrite {
@@ -41,7 +42,27 @@ public:
 				bool state;
 				uint8_t id;
 			} sensor_state;
+			struct UpdateParameters {
+				uint16_t fan_speed;
+				float humidity;
+				float temperature;
+				float humidity_level_on;
+				float humidity_level_off;
+			} update_parameters;
 		} events;
+	};
+
+	union Conv {
+		uint8_t bytes[16];
+		float f;
+		double d;
+		uint8_t u8t;
+		uint16_t u16t;
+		uint32_t u32t;
+		struct {
+			uint16_t hi;
+			uint16_t lo;
+		} hr;
 	};
 private:
 	MailBox<Events, 3> events_queue_;
@@ -57,8 +78,15 @@ private:
 
 	struct Registers {
 		struct Holding {
-			uint16_t rele1;
-			uint16_t sensor1;
+			uint16_t fan_speed;
+			uint16_t humidity_lo;
+			uint16_t humidity_hi;
+			uint16_t temperature_lo;
+			uint16_t temperature_hi;
+			uint16_t humidity_level_on_lo;
+			uint16_t humidity_level_on_hi;
+			uint16_t humidity_level_off_lo;
+			uint16_t humidity_level_off_hi;
 		} holding;
 	} registers_;
 
