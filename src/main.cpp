@@ -14,7 +14,6 @@
 #include "cmsis_os.h"
 #include "mb.h"
 #include "MBComunication.h"
-#include "BL.h"
 #include "BLExtractor.h"
 #include "ReleGPIO.h"
 #include "Button.h"
@@ -40,19 +39,6 @@ static const I2CConfig i2cfg1 = {
     FAST_DUTY_CYCLE_2,
 };
 
-eMBErrorCode
-eMBRegHoldingCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs,
-                 eMBRegisterMode eMode )
-{
-	if (mb_comunication) {
-		return mb_comunication->eMBRegHoldingCB(pucRegBuffer,
-											usAddress,
-											usNRegs,
-											eMode);
-	} else {
-	    return MB_ENOREG;
-	}
-}
 
 eMBException
 eMBFuncPacket( UCHAR * pucFrame, USHORT * usLen )
@@ -82,7 +68,7 @@ int main(void) {
   halInit();
   osKernelInitialize();
 
-  //stm32_backup_registers.write(1, 1);
+  stm32_backup_registers.write(1, 1);
   	uint16_t address = stm32_backup_registers.read(1);
   	uint8_t address1 = address & 0x0F;
 	eMBInit( MB_RTU, address1, 1, 115200, MB_PAR_NONE );

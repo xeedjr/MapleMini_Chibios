@@ -1,0 +1,28 @@
+// A very simple protocol definition, consisting of only
+// one message.
+
+syntax = "proto2";
+
+message Commands {
+	required bool res = 1;
+}
+
+message  ChangeParams {
+	required float temperature = 1;
+	required float humidity = 2;
+	required uint32 fan_speed = 3;
+};
+
+message Notifications {
+	oneof notif {
+		ChangeParams change_parameters = 1;
+	};
+}
+
+message MBMessage {
+	oneof interface {
+		Commands commands = 1;
+		Notifications notifications = 2;
+	}
+}
+

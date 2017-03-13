@@ -63,12 +63,9 @@ void BLExtractor::read_measurements(Events::Event* message) {
 	humidity_ = hummidity;
 	temperature_ = temperature;
 
-	MBComunication::Events ev;
-	ev.ev_type = MBComunication::Events::kUpdateParameters;
-	ev.events.update_parameters.fan_speed = fan_speed_;
-	ev.events.update_parameters.humidity = humidity_;
-	ev.events.update_parameters.temperature = temperature_;
-	mb_comunication->put_event(ev);
+	mb_comunication->send_notification_temp_humidity(humidity_,
+			temperature_,
+			0);
 }
 
 void BLExtractor::put_event(Events ev) {

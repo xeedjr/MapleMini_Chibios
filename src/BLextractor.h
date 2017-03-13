@@ -24,12 +24,17 @@ public:
 			kMeasure,
 			kUpdateValuesInMBRegisters,
 			kReadMeasurements,
+			kProtoMsg,
 		} ev_type;
 
 		union Event {
 			struct ChangeFanSpeed {
 				uint16_t speed;
 			} change_fan_speed;
+			struct ProtoMsg {
+				uint8_t message [256];
+				uint8_t len;
+			} proto_msg;
 		} events;
 	};
 
@@ -39,7 +44,7 @@ private:
 	void Thread (void);
 
 	osThreadId thread_ID = {0};
-	osThreadDef(BLExtractor_Thread, osPriorityNormal, 256);
+	osThreadDef(BLExtractor_Thread, osPriorityNormal, 512);
 
 	static void BLExtractor_Timer (void const *argument);
 	void Timer (void);

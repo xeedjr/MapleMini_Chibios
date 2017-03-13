@@ -7,99 +7,80 @@
 #include <string.h>
 #include <memory>
 #include "MBComunication.h"
+#include "mbframe.h"
 #include "BLExtractor.h"
+#include "pb_decode.h"
+#include "pb_encode.h"
+#include "MBMessage.pb.h"
 
 extern std::unique_ptr<BLExtractor> bl;
 
 MBComunication::MBComunication() {
-	mb_thread_ID = osThreadCreate(osThread(MBComunication_Thread), this);
-	mb_thread_ID->p_name = "MBComunication_Thread";
 }
 
 MBComunication::~MBComunication() {
 	// TODO Auto-generated destructor stub
 }
 
-bool MBComunication::HoldingCheack (uint16_t usAddress,
-									uint16_t usNRegs,
-									uint16_t& cheack_register) {
-	uint16_t int_Address = ((uint8_t*)&registers_.holding - (uint8_t*)&cheack_register) + 1;
+void MBComunication::send_notification_temp_humidity(float hum,
+														float temp,
+														uint32_t speed) {
+	MBMessage msg = MBMessage_init_zero;
+	msg.interface.notifications.notif.change_parameters.fan_speed = 99;
+	msg.interface.notifications.notif.change_parameters.humidity = 50.1;
+	msg.interface.notifications.notif.change_parameters.temperature = 33.5;
+	msg.which_interface = MBMessage_notifications_tag;
+	msg.interface.notifications.which_notif = Notifications_change_parameters_tag;
 
-	if (usAddress <= int_Address &&
-		int_Address < (usAddress + usNRegs))
-		return true;
+	put_message_for_send(msg);
 }
 
-void MBComunication::put_event(Events ev) {
-	events_queue_.push(ev);
-}
+void MBComunication::put_message_for_send(MBMessage& message) {
+    /* This is the buffer where we will store our message. */
+    bool status = false;
 
-void MBComunication::Thread (void) {
-	while(1) {
-		Events ev;
-		events_queue_.pop(ev);
+    /* Encode our message */
 
-		switch(ev.ev_type) {
-		case Events::kHoldingRegisterWrite:
-			if (HoldingCheack(ev.events.holding_register_write.usAddress(),
-								ev.events.holding_register_write.usNRegs(),
-								registers_.holding.fan_speed)) {
-				/// need change fan speed
-				BLExtractor::Events ev;
-				ev.ev_type = BLExtractor::Events::kChangeFanSpeed;
-				ev.events.change_fan_speed.speed = registers_.holding.fan_speed;
-				bl->put_event(ev);
-			}
-			break;
-		case Events::kSensorState:
-//			registers_.holding.sensor1 = ev.events.sensor_state.state;
-			break;
-		case Events::kUpdateParameters:
-			Conv conv;
-			registers_.holding.fan_speed = ev.events.update_parameters.fan_speed;
-			conv.f = ev.events.update_parameters.humidity;
-			registers_.holding.humidity_lo = conv.hr.lo;
-			registers_.holding.humidity_hi = conv.hr.hi;
-			conv.f = ev.events.update_parameters.temperature;
-			registers_.holding.temperature_hi = conv.hr.hi;
-			registers_.holding.temperature_lo = conv.hr.lo;
-			conv.f = ev.events.update_parameters.humidity_level_on;
-			registers_.holding.humidity_level_on_hi = conv.hr.hi;
-			registers_.holding.humidity_level_on_lo = conv.hr.lo;
-			conv.f = ev.events.update_parameters.humidity_level_off;
-			registers_.holding.humidity_level_off_hi = conv.hr.hi;
-			registers_.holding.humidity_level_off_lo = conv.hr.lo;
-			break;
-		}
-	}
-}
+	/* Create a stream that will write to our buffer. */
+	pb_ostream_t stream = pb_ostream_from_buffer(buffer, sizeof(buffer));
 
-eMBErrorCode
-MBComunication::eMBRegHoldingCB( UCHAR * pucRegBuffer,
-								USHORT usAddress,
-								USHORT usNRegs,
-								eMBRegisterMode eMode ) {
-	switch(eMode) {
-	case MB_REG_READ:
-		memcpy(pucRegBuffer, &((uint16_t*)&registers_.holding)[usAddress - 1], usNRegs * sizeof(uint16_t));
-		return MB_ENOERR;
-	case MB_REG_WRITE:
-		memcpy(&((uint16_t*)&registers_.holding)[usAddress - 1], pucRegBuffer, usNRegs * sizeof(uint16_t));
-		Events ev;
-		ev.ev_type = Events::kHoldingRegisterWrite;
-		ev.events.holding_register_write.set(usAddress,
-												usNRegs);
-		events_queue_.push(ev);
-		return MB_ENOERR;
+	/* Now we are ready to encode the message! */
+	status = pb_encode(&stream, MBMessage_fields, &message);
+
+	/* Then just check for any errors.. */
+	if (!status)
+	{
+		return ;
 	}
 
-    return MB_ENOREG;
-
+	if (out_message_len_ == 0) {
+		memcpy(out_messages_, buffer, stream.bytes_written);
+		out_message_len_ = stream.bytes_written;
+	}
 }
 
 eMBException
 MBComunication::eMBFuncPacket( UCHAR * pucFrame, USHORT * usLen ) {
     //memcpy( &pucFrame[MB_PDU_DATA_OFF], &ucMBSlaveID[0], ( size_t )usMBSlaveIDLen );
     //*usLen = ( USHORT )( MB_PDU_DATA_OFF + usMBSlaveIDLen );
+
+	/// copy input message
+	if (*usLen > MB_PDU_DATA_OFF) {
+		BLExtractor::Events ev;
+		ev.ev_type = BLExtractor::Events::kProtoMsg;
+		memcpy(ev.events.proto_msg.message,
+				&pucFrame[MB_PDU_DATA_OFF],
+				*usLen - MB_PDU_DATA_OFF);
+		ev.events.proto_msg.len = (uint8_t)(*usLen - MB_PDU_DATA_OFF);
+		bl->put_event(ev);
+	};
+
+	/// fill out packet if exist
+	if (out_message_len_ != 0) {
+		memcpy(&pucFrame[MB_PDU_DATA_OFF], out_messages_, out_message_len_);
+		*usLen = ( USHORT )( MB_PDU_DATA_OFF + out_message_len_ );
+		out_message_len_ = 0;
+	};
+
     return MB_EX_NONE;
 }
