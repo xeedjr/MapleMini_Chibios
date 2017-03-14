@@ -53,40 +53,40 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.1119820865" name="Cross ARM GNU Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.900555112" name="Use preprocessor" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.482630949" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/system/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os_user_configs}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/lib/streams}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/SPIv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/I2Cv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/ADCv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/RTCv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USBv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USARTv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/GPIOv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/DMAv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/TIMv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/common/ARMCMx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/osal/rt}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/devices/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/cmsis_os}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/compilers/GCC}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/various/cpp_wrappers}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/EXTIv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/CMSIS_RTOS/port}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/Chibios-HAL/port}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/rtu}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/ascii}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ch_modules}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../system/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os_user_configs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/ST&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/lib/streams&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/SPIv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/I2Cv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/ADCv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/RTCv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/USBv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/USARTv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/GPIOv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/DMAv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/TIMv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/common/ARMCMx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/osal/rt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/ST/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/common/ports/ARMCMx/devices/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx/cmsis_os&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx/compilers/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/various/cpp_wrappers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/EXTIv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/demo/CMSIS_RTOS/port&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/demo/Chibios-HAL/port&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/rtu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/ascii&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../ch_modules&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.718838703" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEBUG"/>
@@ -98,43 +98,43 @@
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1638624627" name="Cross ARM C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.893764477" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/system/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os_user_configs}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/lib/streams}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/SPIv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/I2Cv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/ADCv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/RTCv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USBv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USARTv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/GPIOv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/DMAv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/TIMv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/common/ARMCMx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/osal/rt}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/devices/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/cmsis_os}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/compilers/GCC}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/various/cpp_wrappers}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/EXTIv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/CMSIS_RTOS/port}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/Chibios-HAL/port}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus_user_config}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/rtu}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/ascii}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ch_modules}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/proto_msg}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/nanopb}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../system/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os_user_configs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/ST&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/lib/streams&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/SPIv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/I2Cv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/ADCv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/RTCv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/USBv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/USARTv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/GPIOv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/DMAv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/TIMv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/common/ARMCMx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/osal/rt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/ST/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/common/ports/ARMCMx/devices/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx/cmsis_os&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx/compilers/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/various/cpp_wrappers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/EXTIv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/demo/CMSIS_RTOS/port&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/demo/Chibios-HAL/port&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus_user_config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/rtu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/ascii&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../ch_modules&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../proto_msg&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../nanopb&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.468131383" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEBUG"/>
@@ -148,43 +148,43 @@
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.130764176" name="Cross ARM C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1378540076" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/system/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os_user_configs}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/lib/streams}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/SPIv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/I2Cv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/ADCv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/RTCv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USBv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/USARTv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/GPIOv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/DMAv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/TIMv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/common/ARMCMx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/osal/rt}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/ext/CMSIS/ST/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/devices/STM32F1xx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/cmsis_os}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/rt/ports/ARMCMx/compilers/GCC}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/various/cpp_wrappers}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/hal/ports/STM32/LLD/EXTIv1}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus_user_config}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/CMSIS_RTOS/port}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/demo/Chibios-HAL/port}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/rtu}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/modbus/modbus/ascii}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/ch_modules}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/proto_msg}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/nanopb}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../system/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os_user_configs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/ST&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/lib/streams&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/SPIv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/I2Cv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/ADCv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/RTCv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/USBv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/USARTv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/GPIOv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/DMAv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/TIMv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/common/ARMCMx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/osal/rt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/ext/CMSIS/ST/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/common/ports/ARMCMx/devices/STM32F1xx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx/cmsis_os&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/rt/ports/ARMCMx/compilers/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/various/cpp_wrappers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/hal/ports/STM32/LLD/EXTIv1&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus_user_config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/demo/CMSIS_RTOS/port&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/demo/Chibios-HAL/port&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/rtu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../modbus/modbus/ascii&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../ch_modules&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../proto_msg&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../nanopb&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.noexceptions.1470202562" name="Do not use exceptions (-fno-exceptions)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.noexceptions" useByScannerDiscovery="true" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.nortti.1195497566" name="Do not use RTTI (-fno-rtti)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.nortti" useByScannerDiscovery="true" value="true" valueType="boolean"/>
@@ -215,10 +215,10 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.2030299676" name="Cross ARM C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker">
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.733864719" name="Remove unused sections (-Xlinker --gc-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.paths.1198298928" name="Library search path (-L)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os/os/common/ports/ARMCMx/compilers/GCC}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os/os/common/ports/ARMCMx/compilers/GCC&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.scriptfile.1531335477" name="Script files (-T)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.scriptfile" valueType="stringList">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/os_user_configs/STM32F103xB_bootloader.ld}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../os_user_configs/STM32F103xB_bootloader.ld&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart.435011138" name="Do not use standard start files (-nostartfiles)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostart" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.flags.1476806470" name="Linker flags (-Xlinker [option])" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.flags" valueType="stringList">
