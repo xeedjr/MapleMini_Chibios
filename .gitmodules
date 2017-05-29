@@ -9,3 +9,6 @@
 	path = nanopb
 	url = https://github.com/nanopb/nanopb.git
 
+[submodule "ch_modules"]
+	path = ch_modules
+	url = https://github.com/xeedjr/devices_chibios_hal.git
