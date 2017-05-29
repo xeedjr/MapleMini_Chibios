@@ -12,6 +12,7 @@
 #include "mb.h"
 #include "MailBox.h"
 #include "MBMessage.pb.h"
+#include "BLExtractor.h"
 
 class MBComunication {
 public:
@@ -21,6 +22,7 @@ private:
 	uint8_t out_message_len_ = 0;
     uint8_t buffer[256] = {0};
 
+    BLExtractor::Events ev;
 public:
 	MBComunication();
 	virtual ~MBComunication();
@@ -31,6 +33,10 @@ public:
 	void send_notification_temp_humidity(float hum,
 										float temp,
 										uint32_t speed);
+	void send_resp_OK(uint8_t cmd_tag);
+	int decode_message(MBMessage& message,
+						pb_byte_t* buffer,
+						uint8_t len);
 	void put_message_for_send(MBMessage& message);
 };
 

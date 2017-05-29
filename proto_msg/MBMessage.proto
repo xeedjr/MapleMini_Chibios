@@ -3,15 +3,37 @@
 
 syntax = "proto2";
 
-message Commands {
-	required bool res = 1;
-}
+message  ChangeSpeed {
+	required uint32 fan_speed = 1;
+};
 
 message  ChangeParams {
 	required float temperature = 1;
 	required float humidity = 2;
 	required uint32 fan_speed = 3;
 };
+
+message Commands {
+    oneof cmd {
+	    ChangeSpeed change_speed = 1;
+    };
+}
+
+enum Result {
+	OK = 0;
+	Error = 1;
+}
+
+message  ExecResult {
+	required Result result = 1;
+};
+
+message Responses {
+	required uint32 on_command = 1;
+    oneof resp {
+	    ExecResult exec_result = 2;
+    };
+}
 
 message Notifications {
 	oneof notif {
@@ -22,7 +44,8 @@ message Notifications {
 message MBMessage {
 	oneof interface {
 		Commands commands = 1;
-		Notifications notifications = 2;
+		Responses responses = 2;
+		Notifications notifications = 3;
 	}
 }
 

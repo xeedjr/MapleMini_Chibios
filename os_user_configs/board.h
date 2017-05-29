@@ -58,7 +58,7 @@
 #define USER_MB_USART       	  	UARTD1
 #define USER_MB_RTS_ENABLE			1
 #define USER_MB_TIMER 				GPTD1
-#define USER_MB_THREAD_WORK_AREA_SIZE 256
+#define USER_MB_THREAD_WORK_AREA_SIZE 1024
 
 /* on-board */
 
@@ -158,7 +158,7 @@
  * PB8    - Push Pull output  (I2C1_SCL).
  * PB9    - Push Pull output  (I2C1_SDA).
  */
-#define VAL_GPIOBCRL            0x828888A8      /*  PB7...PB0 */
+#define VAL_GPIOBCRL            0x858888A8      /*  PB7...PB0 */
 #define VAL_GPIOBCRH            0x888888DD      /* PB15...PB8 */
 #define VAL_GPIOBODR            0xFFFFFFFF
 

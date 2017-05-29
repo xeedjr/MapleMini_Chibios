@@ -8,7 +8,6 @@
 #include <memory>
 #include "MBComunication.h"
 #include "mbframe.h"
-#include "BLExtractor.h"
 #include "pb_decode.h"
 #include "pb_encode.h"
 #include "MBMessage.pb.h"
@@ -26,13 +25,42 @@ void MBComunication::send_notification_temp_humidity(float hum,
 														float temp,
 														uint32_t speed) {
 	MBMessage msg = MBMessage_init_zero;
-	msg.interface.notifications.notif.change_parameters.fan_speed = 99;
-	msg.interface.notifications.notif.change_parameters.humidity = 50.1;
-	msg.interface.notifications.notif.change_parameters.temperature = 33.5;
+	msg.interface.notifications.notif.change_parameters.fan_speed = speed;
+	msg.interface.notifications.notif.change_parameters.humidity = hum;
+	msg.interface.notifications.notif.change_parameters.temperature = temp;
 	msg.which_interface = MBMessage_notifications_tag;
 	msg.interface.notifications.which_notif = Notifications_change_parameters_tag;
 
 	put_message_for_send(msg);
+}
+
+void MBComunication::send_resp_OK(uint8_t cmd_tag) {
+	MBMessage msg = MBMessage_init_zero;
+	msg.which_interface = MBMessage_responses_tag;
+	msg.interface.responses.which_resp = Responses_exec_result_tag;
+	msg.interface.responses.on_command = cmd_tag;
+	msg.interface.responses.resp.exec_result.result = Result::Result_OK;
+
+	put_message_for_send(msg);
+}
+
+int MBComunication::decode_message(MBMessage& message,
+									pb_byte_t* buffer,
+									uint8_t len) {
+    /* This is the buffer where we will store our message. */
+    bool status = false;
+
+    /* Create a stream that reads from the buffer. */
+    pb_istream_t stream = pb_istream_from_buffer(buffer, len);
+
+    /* Now we are ready to decode the message. */
+    status = pb_decode(&stream, MBMessage_fields, &message);
+
+    /* Check for errors... */
+    if (!status)
+    {
+        return 1;
+    }
 }
 
 void MBComunication::put_message_for_send(MBMessage& message) {
@@ -66,7 +94,6 @@ MBComunication::eMBFuncPacket( UCHAR * pucFrame, USHORT * usLen ) {
 
 	/// copy input message
 	if (*usLen > MB_PDU_DATA_OFF) {
-		BLExtractor::Events ev;
 		ev.ev_type = BLExtractor::Events::kProtoMsg;
 		memcpy(ev.events.proto_msg.message,
 				&pucFrame[MB_PDU_DATA_OFF],

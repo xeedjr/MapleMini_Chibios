@@ -44,7 +44,7 @@ private:
 	void Thread (void);
 
 	osThreadId thread_ID = {0};
-	osThreadDef(BLExtractor_Thread, osPriorityNormal, 512);
+	osThreadDef(BLExtractor_Thread, osPriorityNormal, 2048);
 
 	static void BLExtractor_Timer (void const *argument);
 	void Timer (void);
@@ -52,11 +52,12 @@ private:
 
 	SI7021 si7021_;
 
-	uint16_t fan_speed_ = 0;
+	uint16_t curr_fan_speed_ = 0;
 	float humidity_ = 0;
 	float temperature_ = 0;
 	float humidity_level_on_ = 60;
 	float humidity_level_off_ = 40;
+
 
 public:
 	BLExtractor();
@@ -65,9 +66,12 @@ public:
 	typedef BLMain<Events::EventType, Events::Event> BL;
 	BL bl_main;
 
-	BL::StateTable state_table[2];
+	BL::StateTable state_table[3];
+	BL::EventPair put_event_pair;
+	Events ev_pair;
 
 	void change_fan_speed(Events::Event*);
+	void proto_message(Events::Event*);
 	void read_measurements(Events::Event* message);
 
 };

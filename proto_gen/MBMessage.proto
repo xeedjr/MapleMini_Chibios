@@ -3,8 +3,14 @@
 
 syntax = "proto2";
 
+message  ChangeSpeed {
+	required uint32 fan_speed = 1;
+};
+
 message Commands {
-	required bool res = 1;
+    oneof cmd {
+	    ChangeSpeed change_speed = 1;
+    };
 }
 
 message  ChangeParams {
