@@ -12,3 +12,6 @@
 [submodule "ch_modules"]
 	path = ch_modules
 	url = https://github.com/xeedjr/devices_chibios_hal.git
+[submodule "src/lwip"]
+	path = src/lwip
+	url = https://git.savannah.nongnu.org/git/lwip.git
