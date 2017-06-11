@@ -58,7 +58,7 @@
 #define USER_MB_USART       	  	UARTD1
 #define USER_MB_RTS_ENABLE			1
 #define USER_MB_TIMER 				GPTD1
-#define USER_MB_THREAD_WORK_AREA_SIZE 1024
+#define USER_MB_THREAD_WORK_AREA_SIZE 2048
 
 /* on-board */
 

@@ -30,7 +30,7 @@ BLExtractor::BLExtractor() {
 								std::placeholders::_1);
 	bl_main.SetNewState(state_table, 3);
 
-	thread_ID = osThreadCreate(osThread(BLExtractor_Thread), this);
+/*	thread_ID = osThreadCreate(osThread(BLExtractor_Thread), this);
 	if (thread_ID == nullptr) {
 		/// Error
 		chSysHalt("Error create thread");
@@ -40,8 +40,13 @@ BLExtractor::BLExtractor() {
 	si7021_.init(&I2CD1);
 
 	/// create period read humidity sensor data
-	osTimerId timer0 = osTimerCreate(osTimer(timer0_handle), osTimerPeriodic, (void *)this);
+	timer0 = osTimerCreate(osTimer(timer0_handle), osTimerPeriodic, (void *)this);
+	if (timer0 == nullptr) {
+		/// Error
+		chSysHalt("Error create timer0");
+	}
 	osTimerStart (timer0, 100);
+*/
 }
 
 BLExtractor::~BLExtractor() {

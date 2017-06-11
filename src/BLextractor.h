@@ -44,10 +44,11 @@ private:
 	void Thread (void);
 
 	osThreadId thread_ID = {0};
-	osThreadDef(BLExtractor_Thread, osPriorityNormal, 2048);
+	osThreadDef(BLExtractor_Thread, osPriorityNormal, 256);
 
 	static void BLExtractor_Timer (void const *argument);
 	void Timer (void);
+	osTimerId timer0;
 	osTimerDef(timer0_handle, BLExtractor_Timer);
 
 	SI7021 si7021_;

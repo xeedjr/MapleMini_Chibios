@@ -13,6 +13,8 @@
 #include "hal.h"
 #include "cmsis_os.h"
 #include "mb.h"
+#include "uip.h"
+
 #include "MBComunication.h"
 #include "BLExtractor.h"
 #include "ReleGPIO.h"
@@ -22,6 +24,8 @@
 #include "Servo.h"
 #include "ESP8266Parser.h"
 #include "BackupRegister.h"
+#include "TCPMB.h"
+
 
 using namespace chibios_rt;
 
@@ -29,6 +33,7 @@ std::unique_ptr<MBComunication> mb_comunication;
 std::unique_ptr<BLExtractor> bl;
 std::unique_ptr<ReleGPIO> rele1;
 std::unique_ptr<ESP8266Parser> esp;
+std::unique_ptr<TCPMB> tvp_mb;
 
 /*
  * I2C1 config.
@@ -77,7 +82,7 @@ int main(void) {
 	xMBPortPollThreadInit();
 
 	rele1.reset(new ReleGPIO(USER_RELE1_PORT, USER_RELE1));
-	bl.reset(new BLExtractor);
+//	bl.reset(new BLExtractor);
 	mb_comunication.reset(new MBComunication);
 
 //	  esp.reset(new ESP8266Parser);
@@ -86,6 +91,7 @@ int main(void) {
 
 	i2cStart(&I2CD1, &i2cfg1);
 
+	tvp_mb.reset(new TCPMB());
   /*
    * Serves timer events.
    */
