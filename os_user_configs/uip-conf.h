@@ -171,6 +171,16 @@ void TCPMB_application_cb(void);
 }
 #endif
 
+struct uip_tcp_appstate_t_s {
+	uint8_t conn_id;
+	uint8_t conn_fl;
+	uint8_t* send_buff;
+	uint16_t send_len;
+	uint8_t* recv_buff;
+	uint16_t* recv_len;
+};
+typedef struct uip_tcp_appstate_t_s uip_tcp_appstate_t;
+
 #endif /* __UIP_CONF_H__ */
 
 /** @} */

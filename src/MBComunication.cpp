@@ -23,26 +23,6 @@ MBComunication::~MBComunication() {
 	// TODO Auto-generated destructor stub
 }
 
-void MBComunication::send_notification_temp_humidity(float hum,
-														float temp,
-														uint32_t speed) {
-
-}
-
-void MBComunication::send_resp_OK(uint8_t cmd_tag) {
-
-}
-
-int MBComunication::decode_message(MBMessage& message,
-									pb_byte_t* buffer,
-									uint8_t len) {
-
-}
-
-void MBComunication::put_message_for_send(MBMessage& message) {
-
-}
-
 void MBComunication::put_out_packet(uint8_t* buff, uint16_t len) {
 	if (out_packet__len_ == 0) {
 		memcpy(out_packet_,

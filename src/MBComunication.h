@@ -31,14 +31,6 @@ public:
 	eMBException
 	eMBFuncPacket( UCHAR * pucFrame, USHORT * usLen );
 
-	void send_notification_temp_humidity(float hum,
-										float temp,
-										uint32_t speed);
-	void send_resp_OK(uint8_t cmd_tag);
-	int decode_message(MBMessage& message,
-						pb_byte_t* buffer,
-						uint8_t len);
-	void put_message_for_send(MBMessage& message);
 	void put_out_packet(uint8_t* buff, uint16_t len);
 	uint8_t get_in_packet(uint8_t* buff);
 };

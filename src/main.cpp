@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory>
+#include <new>
 
 #include "ch.hpp"
 #include "hal.h"
@@ -25,15 +26,25 @@
 #include "ESP8266Parser.h"
 #include "BackupRegister.h"
 #include "TCPMB.h"
-
+#include "TCPClient.h"
+#include "PBFunct.h"
 
 using namespace chibios_rt;
 
 std::unique_ptr<MBComunication> mb_comunication;
+uint8_t mb_comunication_r[sizeof(MBComunication)];
 std::unique_ptr<BLExtractor> bl;
+uint8_t bl_r[sizeof(BLExtractor)];
 std::unique_ptr<ReleGPIO> rele1;
-std::unique_ptr<ESP8266Parser> esp;
+uint8_t rele1_r[sizeof(ReleGPIO)];
+//std::unique_ptr<ESP8266Parser> esp;
+//uint8_t esp_r[sizeof(ESP8266Parser)];
 std::unique_ptr<TCPMB> tvp_mb;
+uint8_t tvp_mb_r[sizeof(TCPMB)];
+std::unique_ptr<TCPClient> tcp_client;
+uint8_t tcp_client_r[sizeof(TCPClient)];
+std::unique_ptr<PBFunct> pb_funct;
+uint8_t pb_funct_r[sizeof(PBFunct)];
 
 /*
  * I2C1 config.
@@ -81,9 +92,11 @@ int main(void) {
 
 	xMBPortPollThreadInit();
 
-	rele1.reset(new ReleGPIO(USER_RELE1_PORT, USER_RELE1));
-//	bl.reset(new BLExtractor);
-	mb_comunication.reset(new MBComunication);
+	pb_funct.reset(new (pb_funct_r) PBFunct);
+
+	rele1.reset(new (rele1_r) ReleGPIO(USER_RELE1_PORT, USER_RELE1));
+	bl.reset(new (bl_r) BLExtractor);
+	mb_comunication.reset(new (mb_comunication_r) MBComunication);
 
 //	  esp.reset(new ESP8266Parser);
 
@@ -91,7 +104,9 @@ int main(void) {
 
 	i2cStart(&I2CD1, &i2cfg1);
 
-	tvp_mb.reset(new TCPMB());
+	tvp_mb.reset(new (tvp_mb_r) TCPMB());
+	tcp_client.reset(new (tcp_client_r) TCPClient);
+
   /*
    * Serves timer events.
    */

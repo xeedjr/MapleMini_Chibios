@@ -12,7 +12,7 @@
 #include "cmsis_os.h"
 #include "MailBox.h"
 #include "timer.h"
-
+#include "uip.h"
 
 class TCPMB {
 
@@ -28,6 +28,13 @@ public:
 	void send_event_incoming_packet ();
 	static void TCPMB_periodic_timer_cb(void const *argument);
 	static void TCPMB_arp_timer_cb(void const *argument);
+	void application_cb(void);
+
+	void connected(void);
+	void closed(void);
+	void acked(void);
+	void newdata(void);
+	void senddata(void);
 
 	osThreadId thread_ID = {0};
 	osThreadDef(TCPMB_Thread, osPriorityNormal, 512);
@@ -39,9 +46,32 @@ public:
 	//struct timer periodic_timer, arp_timer;
 	enum ThtrEv {
 		kPeriodix = 	(1 << 0),
-		kARP = 			(1 << 1),
+		kPeriodicARP =  (1 << 1),
 		kIncominPacket = (1 << 2),
+		kTCPDataSendOrPoll  = (1 << 3),
 	};
+
+	struct Result {
+		enum {
+			kConnectOk = 1,
+			kClosed = 2,
+			kSendOk = 3,
+			kReceivedData = 4,
+		} ev;
+		struct uip_conn* conn;
+		uint16_t len;
+	};
+	std::array<std::function<void(TCPMB::Result result)>,
+				UIP_CONNS> result_cb_conn_id;
+
+	struct uip_conn* connect(uint8_t ip1, uint8_t ip2, uint8_t ip3, uint8_t ip4, uint16_t port, std::function<void(Result result)> result_cb);
+	int close(struct uip_conn* conn);
+	int send_data(struct uip_conn*,
+					uint8_t* buff,
+					uint16_t len);
+	int read_data(struct uip_conn* conn,
+						uint8_t* buff,
+						uint16_t* len);
 };
 
 #endif /* TCPMB_H_ */

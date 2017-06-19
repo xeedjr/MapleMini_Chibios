@@ -66,22 +66,27 @@ private:
 	    	/// error
 	    	return;
 	    }
-		item = buffers.at(peEvent_.value.v);
+		item = std::move(buffers.at(peEvent_.value.v));
+
+		/// MANUALY CALL DESTRUCTOR FOR UNUSED OBJEDCTS
+		//buffers.at(peEvent_.value.v).~T();
 
 		osMessagePut(free_mail_box__ID, peEvent_.value.v, osWaitForever);
 	}
 
-	void push(T& item)
+	int push(T& item)
 	{
 		osEvent  peEvent_;
 		peEvent_ = osMessageGet(free_mail_box__ID, osWaitForever);
 	    if( osEventMessage != peEvent_.status)
 	    {
 	    	/// error
-	    	return;
+	    	return -1;
 	    }
 		buffers.at(peEvent_.value.v) = item;
 		osMessagePut(mail_box__ID, peEvent_.value.v, osWaitForever);
+
+		return 0;
 	}
 
 	void pushI(T& item)

@@ -92,7 +92,7 @@
  *          provide the @p __heap_base__ and @p __heap_end__ symbols.
  * @note    Requires @p CH_CFG_USE_MEMCORE.
  */
-#define CH_CFG_MEMCORE_SIZE                 0
+#define CH_CFG_MEMCORE_SIZE                 (6*1024)
 
 /**
  * @brief   Idle thread automatic spawn suppression.
@@ -496,7 +496,7 @@
 
 // Fixup bootloader offset of MapleMini
 //#if USE_MAPLEMINI_BOOTLOADER
-# define CORTEX_VTOR_INIT 0x5000
+# define CORTEX_VTOR_INIT 0x3C00
 //#endif
 
 #endif  /* _CHCONF_H_ */

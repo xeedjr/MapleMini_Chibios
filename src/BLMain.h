@@ -69,7 +69,11 @@ public:
 		if (state_table != nullptr) {
 			for (int i = 0; i < state_table_len; i++) {
 				if (state_table[i].ev_type == ev.ev_type) {
-					state_table[i].fun(&ev.ev_data);
+					if (state_table[i].fun) {
+						state_table[i].fun(&ev.ev_data);
+					} else {
+						chSysHalt("GeneralWait nullptr fun call");
+					}
 				}
 			}
 		};

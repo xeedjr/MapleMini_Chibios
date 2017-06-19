@@ -9,42 +9,43 @@
 #define BLEXTRACTOR_H_
 
 #include <functional>
+#include <memory>
 #include "cmsis_os.h"
 #include "MailBox.h"
 #include "BLMain.h"
 #include "SI7021.h"
+#include "PBFunct.h"
 
 class BLExtractor {
 
 public:
-	class Events {
-	public:
+	struct Events {
 		enum EventType {
 			kChangeFanSpeed = 0,
 			kMeasure,
 			kUpdateValuesInMBRegisters,
 			kReadMeasurements,
 			kProtoMsg,
+			kTCPStackResult,
 		} ev_type;
 
-		union Event {
-			struct ChangeFanSpeed {
-				uint16_t speed;
-			} change_fan_speed;
-			struct ProtoMsg {
-				uint8_t message [256];
-				uint8_t len;
-			} proto_msg;
+		struct Event {
+			PBFunct::PBPacketShrdPtr packet;
+			union {
+				uint8_t u1;
+				uint16_t u2;
+				struct ChangeFanSpeed {
+					uint16_t speed;
+				} change_fan_speed;
+				struct ProtoMsg {
+
+				} proto_msg;
+			} trivial;
 		} events;
 	};
 
 	void put_event(Events ev);
 private:
-	static void BLExtractor_Thread (void const *argument);
-	void Thread (void);
-
-	osThreadId thread_ID = {0};
-	osThreadDef(BLExtractor_Thread, osPriorityNormal, 256);
 
 	static void BLExtractor_Timer (void const *argument);
 	void Timer (void);
@@ -59,15 +60,19 @@ private:
 	float humidity_level_on_ = 60;
 	float humidity_level_off_ = 40;
 
-
 public:
 	BLExtractor();
 	virtual ~BLExtractor();
 
 	typedef BLMain<Events::EventType, Events::Event> BL;
 	BL bl_main;
+	static void BLExtractor_Thread (void const *argument);
+	void Thread (void);
+	osThreadId thread_ID = {0};
+	osThreadDef(BLExtractor_Thread, osPriorityNormal, 1024);
 
-	BL::StateTable state_table[3];
+
+	BL::StateTable state_table[10];
 	BL::EventPair put_event_pair;
 	Events ev_pair;
 
