@@ -47,7 +47,7 @@
 
 /* on-board */
 
-#define INDICATE               		GPIOC_LED
+#define INDICATE               		13
 #define INDICATE_PORT          		GPIOC
 #define USER_BUTTON            		7
 #define USER_BUTTON_PORT       		GPIOB
@@ -60,59 +60,14 @@
 #define USER_MB_TIMER 				GPTD1
 #define USER_MB_THREAD_WORK_AREA_SIZE 1024
 #define USER_MB_THREAD_PRIORITY 	osPriorityNormal
+#define ENC28J60_SPI				SPID1
+#define ENC28J60_CS					4
+#define ENC28J60_CS_PORT			GPIOA
+#define ENC28J60_INT				0
+#define ENC28J60_INT_PORT			GPIOB
+#define ENC28J60_RESET				1
+#define ENC28J60_RESET_PORT			GPIOB
 
-/* on-board */
-
-#define GPIOC_LED               13
-#define GPIOB_USB_DISC          9
-#define GPIOD_OSC_IN            0
-#define GPIOD_OSC_OUT           1
-
-/* J1 connector */
-
-// pin 1:       AV+
-// pin 2:       AV-
-// pin 3:       VBAT
-#define GPIOC_TAMPER_RTC        13      // pin 4
-#define GPIOC_OSC32_IN          14      // pin 5
-#define GPIOC_OSD32_OUT         15      // pin 6
-// pin 7:       RESET
-#define GPIOA_USART2_CTS        0       // pin 8
-#define GPIOA_USART2_RTS        1       // pin 9
-#define GPIOA_USART2_TX         2       // pin 10
-#define GPIOA_USART2_RX         3       // pin 11
-#define GPIOA_SPI1_NSS          4       // pin 12
-#define GPIOA_SPI1_SCK          5       // pin 13
-#define GPIOA_SPI1_MISO         6       // pin 14
-#define GPIOA_SPI1_MOSI         7       // pin 15
-#define GPIOB_ADC12_IN8         0       // pin 16
-#define GPIOB_BOOT1             2       // pin 17
-#define GPIOB_I2C2_SCL          10      // pin 18
-#define GPIOB_I2C2_SDA          11      // pin 19
-// pin 20: VIN
-
-/* J2 connector */
-
-#define GPIOB_SPI2_NSS          12      // pin 1
-#define GPIOB_SPI2_SCK          13      // pin 2
-#define GPIOB_SPI2_MISO         14      // pin 3
-#define GPIOB_SPI2_MOSI         15      // pin 4
-#define GPIOA_USART1_CK         8       // pin 5
-#define GPIOA_USART1_TX         9       // pin 6
-#define GPIOA_USART1_RX         10      // pin 7
-#define GPIOA_USBDM             11      // pin 8
-#define GPIOA_USBDP             12      // pin 9
-#define GPIOA_JTMS              13      // pin 10
-#define GPIOA_JTCK              14      // pin 11
-#define GPIOA_JTDI              15      // pin 12
-#define GPIOB_JTDO              3       // pin 13
-#define GPIOB_JTRST             4       // pin 14
-#define GPIOB_I2C1_SMBA         5       // pin 15
-#define GPIOB_I2C1_SCL          6       // pin 16
-#define GPIOB_I2C1_SDA          7       // pin 17
-#define GPIOB_BOOT0_BUTTON      8       // pin 18
-// pin 19: GND
-// pin 20: VCC
 
 /*
  * I/O ports initial setup, this configuration is established soon after reset
@@ -143,24 +98,26 @@
  * Everything input with pull-up except:
  * PA2  - Alternate output  (USART2 TX).
  * PA3  - Normal input      (USART2 RX).
+ * PA4  - Push Pull output 50MHz.      (ENC_CS).
+ * PA5  - Push Pull output 50MHz.      (ENC_SCK).
+ * PA6  - input.      (ENC_MISO).
+ * PA7  - Push Pull output 50MHz.      (ENC_MOSI).
  * PA9  - Alternate output  (USART1 TX).
  * PA10 - Normal input      (USART1 RX).
  * PA12 - Alternate output  (USART1 RTS).
  */
-#define VAL_GPIOACRL            0x88884B88      /*  PA7...PA0 */
+#define VAL_GPIOACRL            0xB4B34B88      /*  PA7...PA0 */
 #define VAL_GPIOACRH            0x888384B8      /* PA15...PA8 */
 #define VAL_GPIOAODR            0xFFFFFFFF
 
 /*
  * Port B setup.
  * Everything input with pull-up except:
- * PB1    - Push Pull output  (LED).
- * PB6    - Push Pull output  (Rele).
- * PB8    - Push Pull output  (I2C1_SCL).
- * PB9    - Push Pull output  (I2C1_SDA).
+ * PB0    - Push Pull output  (ENC_INT).
+ * PB1    - Push Pull output  (ENC_RESET).
  */
-#define VAL_GPIOBCRL            0x858888A8      /*  PB7...PB0 */
-#define VAL_GPIOBCRH            0x888888DD      /* PB15...PB8 */
+#define VAL_GPIOBCRL            0x88888814      /*  PB7...PB0 */
+#define VAL_GPIOBCRH            0x88888888      /* PB15...PB8 */
 #define VAL_GPIOBODR            0xFFFFFFFF
 
 /*

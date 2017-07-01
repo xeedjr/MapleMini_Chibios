@@ -9,16 +9,20 @@
 #define TCPMB_H_
 
 #include <functional>
+#include <memory>
 #include "cmsis_os.h"
 #include "MailBox.h"
 #include "timer.h"
 #include "uip.h"
 
 class TCPMB {
-
+	std::shared_ptr<uint8_t> packet_incom;
+	uint16_t packet_incom_len = 0;
 public:
 	TCPMB();
 	virtual ~TCPMB();
+
+	void put_incoming_packet (std::shared_ptr<uint8_t> p, uint16_t len);
 
 	uint16_t network_device_read (void);
 	uint16_t network_device_send (void);

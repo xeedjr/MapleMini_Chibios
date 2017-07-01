@@ -6,17 +6,18 @@
  */
 #include <memory>
 #include <string>
+#include <string.h>
 #include <stdio.h>
 
 #include "TCPMB.h"
 #include "uip.h"
 #include "timer.h"
 #include "uip_arp.h"
-#include "MBComunication.h"
+#include "EthSwitch.h"
+
+extern std::unique_ptr<EthSwitch> eth_switch;
 
 #define BUF ((struct uip_eth_hdr *)&uip_buf[0])
-
-extern std::unique_ptr<MBComunication> mb_comunication;
 
 static TCPMB* local_p = nullptr;
 
@@ -187,7 +188,7 @@ void TCPMB::newdata(void) {
 	}
 
 	if (uip_datalen() > 0) {
-		memcpy(uip_conn->appstate.recv_buff,
+/*		memcpy(uip_conn->appstate.recv_buff,
 				uip_appdata,
 				uip_datalen());
 		*(uip_conn->appstate.recv_len) = uip_datalen();
@@ -195,7 +196,7 @@ void TCPMB::newdata(void) {
 		uip_conn->appstate.recv_len = nullptr;
 
 		result_cb_conn_id[uip_conn->appstate.conn_id](res);
-	};
+*/	};
 }
 
 void TCPMB::senddata(void) {
@@ -207,14 +208,14 @@ void TCPMB::senddata(void) {
 	buflen = 0;
 
 	if(buflen + uip_conn->appstate.send_len < uip_mss()) {
-		if (uip_conn->appstate.send_len > 0){
+/*		if (uip_conn->appstate.send_len > 0){
 			memcpy(bufptr,
 					uip_conn->appstate.send_buff,
 					uip_conn->appstate.send_len);
 			bufptr += uip_conn->appstate.send_len;
 			buflen += uip_conn->appstate.send_len;
 		};
-	} else {
+*/	} else {
 
 	}
 
@@ -258,12 +259,35 @@ void TCPMB::application_cb(void) {
 }
 
 u16_t TCPMB::network_device_read (void) {
-	return mb_comunication->get_in_packet(uip_buf);
+	//uint16_t len =  enc28j60PacketReceive(&enc28j60, uip_buf, UIP_CONF_BUFFER_SIZE);
+
+	uint16_t len = packet_incom_len;
+	if (len > UIP_CONF_BUFFER_SIZE) {
+		len = 0;
+	}
+
+	memcpy(uip_buf, packet_incom.get(), len);
+
+	packet_incom = nullptr;
+	packet_incom_len = 0;
+
+	if (len > 6) {
+		uint8_t broadcast_addr[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+		if ((memcmp((void*)uip_buf, (void*)uip_ethaddr.addr, 6) != 0) &&
+			(memcmp((void*)uip_buf, (void*)broadcast_addr, 6) != 0)) {
+			len = 0;
+		}
+	}
+
+	return len;
+//	return mb_comunication->get_in_packet(uip_buf);
 }
 
 u16_t TCPMB::network_device_send (void) {
-	mb_comunication->put_out_packet(uip_buf,
-									uip_len);
+	eth_switch->NetIfSendPacket(uip_buf, uip_len);
+	//enc28j60PacketSend(&enc28j60, uip_buf, uip_len);
+//	mb_comunication->put_out_packet(uip_buf,
+//									uip_len);
 	uip_len = 0;
 }
 
@@ -375,3 +399,10 @@ void TCPMB::TCPMB_arp_timer_cb(void const *argument) {
 	p->send_event(TCPMB::kPeriodicARP);
 }
 
+void TCPMB::put_incoming_packet (std::shared_ptr<uint8_t> p, uint16_t len) {
+	if (packet_incom == nullptr) {
+		packet_incom = p;
+		packet_incom_len = len;
+		send_event_incoming_packet();
+	}
+}
